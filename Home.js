@@ -767,13 +767,14 @@ const restaurantList = [
     },
   ];
 
-const Items=()=>{
+const Items=({name,cuisines,lastMileTravelString,cloudinaryImageId})=>{
     return(
         <div className="card">
-           <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restaurantList[0].data?.cloudinaryImageId }/>
-        <h2>{restaurantList[0].data?.name}</h2>
-        <h3>{restaurantList[0].data?.cuisines.join(",")}</h3>
-        <h4>{restaurantList[0].data?.lastMileTravelString} minutes</h4>
+           <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + 
+            cloudinaryImageId }/>
+        <h2>{name}</h2>
+        <h3>{cuisines.join(",")}</h3>
+        <h4>{lastMileTravelString} minutes</h4>
         </div>
     )
 } 
@@ -781,11 +782,9 @@ const Items=()=>{
 const Body=()=>{
     return(
       <div  className="lists">
-        <Items restaurant={restaurantList[0]}/>
-        <Items restaurant={restaurantList[1]}/>
-        <Items restaurant={restaurantList[2]}/>
-        <Items restaurant={restaurantList[3]}/>
-        <Items restaurant={restaurantList[4]}/>
+        {restaurantList.map((restaurant)=>{
+          return <Items {...restaurant.data} key={restaurant.data.id}/>
+        })}
       </div>
     )
 }

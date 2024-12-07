@@ -1,41 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-const Title=()=>{
-    return(
-        <a href="/">
-        <img className="logo"
-        alt="logo" 
-        src="https://images.all-free-download.com/images/thumbjpg/sport_logo_modern_elegant_clean_design_6935390.jpg" />
-        </a>
-    )
-}
+export const IMG_CDN="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-const Header=()=>{
-return(
-    <div className="header">
-    <Title />
-<div className="nav-items">
-<ul>
-    <li>Home</li>
-    <li>About US</li>
-    <li>Cart</li>
-    <li>Sign in</li>
-</ul>
-</div>
-</div>
-)
-}
-const AppComponent=()=>{
-    return(
-    <React.Fragment>
-       <Header/> 
-       <Body />
-       <Footer />
-    </React.Fragment>
-    )
-}
-
-const restaurantList = [
+export const restaurantList = [
     {
       type: "restaurant",
       data: {
@@ -766,33 +731,3 @@ const restaurantList = [
       subtype: "basic",
     },
   ];
-
-const Items=({name,cuisines,lastMileTravelString,cloudinaryImageId})=>{
-    return(
-        <div className="card">
-           <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + 
-            cloudinaryImageId }/>
-        <h2>{name}</h2>
-        <h3>{cuisines.join(",")}</h3>
-        <h4>{lastMileTravelString} minutes</h4>
-        </div>
-    )
-} 
-
-const Body=()=>{
-    return(
-      <div  className="lists">
-        {restaurantList.map((restaurant)=>{
-          return <Items {...restaurant.data} key={restaurant.data.id}/>
-        })}
-      </div>
-    )
-}
-const Footer=()=>{
-    return(
-        <h1>footer</h1>
-    )
-}
-
-const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppComponent />);

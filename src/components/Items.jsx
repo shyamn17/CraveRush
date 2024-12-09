@@ -1,4 +1,4 @@
-import { IMG_CDN } from "../components/config";
+import { IMG_CDN } from "./config";
 
  const Items=({name,cuisines,lastMileTravelString,cloudinaryImageId})=>{
     return(

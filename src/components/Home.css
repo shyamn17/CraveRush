@@ -1,0 +1,69 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.nav-items>ul{
+    display: flex;
+    list-style: none;
+}
+.nav-items>ul>li{
+    padding: 20px;
+}
+.logo{
+    width: 100px;
+}
+.card{
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+   
+}
+.card>img{
+    width: 100%;
+    height: 180px;
+}
+.lists{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+  
+.shimmer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns per row */
+    gap: 16px; /* Adjust the space between cards */
+    padding: 20px;
+  }
+  
+  .shimmer-card {
+    background-color: #f0f0f0;
+    width: 100%; /* Ensure it fills the width of the parent */
+    height: 200px; /* Match the height of your card */
+    border-radius: 8px; /* Adjust the border-radius for rounded corners */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.2) 75%);
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  

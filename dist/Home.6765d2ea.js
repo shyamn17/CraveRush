@@ -27610,17 +27610,13 @@ const Body = ()=>{
         const filteredData = filterData(searchtxt, restaurants);
         setFilteredRestaurants(filteredData);
     };
-    if (filteredRestaurants?.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "No restaurants found"
-    }, void 0, false, {
+    if (!restaurants) return null;
+    // if(filteredRestaurants?.length===0)
+    //   return <h1>No restaurants found</h1>;
+    return restaurants?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 42,
-        columnNumber: 10
-    }, undefined);
-    return filteredRestaurants?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.jsx",
-        lineNumber: 44,
-        columnNumber: 45
+        lineNumber: 46,
+        columnNumber: 3
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27631,7 +27627,7 @@ const Body = ()=>{
                 onChange: (e)=>setSearchtxt(e.target.value)
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 46,
+                lineNumber: 49,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27640,7 +27636,7 @@ const Body = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 54,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27650,14 +27646,14 @@ const Body = ()=>{
                         key: restaurant.info.id,
                         __source: {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 60,
+                            lineNumber: 63,
                             columnNumber: 11
                         },
                         __self: undefined
                     }))
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 58,
+                lineNumber: 61,
                 columnNumber: 7
             }, undefined)
         ]
@@ -28445,7 +28441,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _config = require("./config");
-const Items = ({ name, cuisines, lastMileTravelString, cloudinaryImageId })=>{
+const Items = ({ name, cuisines, cloudinaryImageId, avgRating })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
@@ -28453,38 +28449,35 @@ const Items = ({ name, cuisines, lastMileTravelString, cloudinaryImageId })=>{
                 src: (0, _config.IMG_CDN) + cloudinaryImageId
             }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 6,
-                columnNumber: 12
+                lineNumber: 10,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: name
             }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 7,
-                columnNumber: 9
+                lineNumber: 11,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines.join(",")
+                children: cuisines.join(", ")
             }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 8,
-                columnNumber: 9
+                lineNumber: 12,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    lastMileTravelString,
-                    " minutes"
-                ]
-            }, void 0, true, {
+                children: avgRating
+            }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 9,
-                columnNumber: 9
+                lineNumber: 13,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Items.jsx",
-        lineNumber: 5,
-        columnNumber: 9
+        lineNumber: 9,
+        columnNumber: 5
     }, undefined);
 };
 _c = Items;
@@ -28507,13 +28500,21 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _homeCss = require("./Home.css"); // Add a separate CSS file for shimmer styles
 const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "loading"
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-container",
+        children: Array(10).fill("").map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, index, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 9,
+                columnNumber: 11
+            }, undefined))
     }, void 0, false, {
         fileName: "src/components/Shimmer.js",
-        lineNumber: 3,
-        columnNumber: 9
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Shimmer;
@@ -28526,6 +28527,6 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","2hAeU","fGRvi"], "fGRvi", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Home.css":"gNgm8"}],"gNgm8":[function() {},{}]},["aQL8O","2hAeU","fGRvi"], "fGRvi", "parcelRequire94c2")
 
 //# sourceMappingURL=Home.6765d2ea.js.map

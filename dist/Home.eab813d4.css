@@ -33,4 +33,20 @@
   flex-wrap: wrap;
   display: flex;
 }
+
+.shimmer {
+  background: linear-gradient(to right, #f000 0%, #fc0000 50%, #d40c0c00 100%) 0 0 / 200% 100%;
+  height: 180px;
+  animation: 2s infinite shimmer;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
 /*# sourceMappingURL=Home.eab813d4.css.map */

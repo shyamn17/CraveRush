@@ -38,10 +38,13 @@ const Body = () => {
     setFilteredRestaurants(filteredData);
   };
 
-if(filteredRestaurants?.length===0)
-  return <h1>No restaurants found</h1>;
+  if(!restaurants) return null;
+// if(filteredRestaurants?.length===0)
+//   return <h1>No restaurants found</h1>;
 
-  return (filteredRestaurants?.length===0)? <Shimmer/> : (
+return restaurants?.length === 0 ? (
+  <Shimmer />
+) : (
     <>
       <input
         type="text"

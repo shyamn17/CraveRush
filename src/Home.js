@@ -8,7 +8,7 @@ import Body from "./components/Body";
 const AppComponent=()=>{
     return(
     <React.Fragment>
-       <Header/> 
+       <Header /> 
        <Body />
        <Footer />
     </React.Fragment>

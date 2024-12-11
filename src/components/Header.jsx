@@ -1,8 +1,5 @@
 import { useState } from "react";
-
-let loggedInUser=()=> {
-    return true;
-}
+import {Link} from "react-router-dom";
 
 export const Title=()=>{
     return(
@@ -24,10 +21,11 @@ const [isLoggedIn , setisLoggedIn]=useState(false);
 
     <div className="nav-items">
     <ul>
-        <li>Home</li>
-        <li>About US</li>
-        <li>Cart</li>
-        <li>Sign in</li>
+       <Link to="/"><li>Home</li></Link>
+       <Link to="/about"><li>About Us</li></Link>  
+       <Link to="/"><li>Cart</li></Link>  
+       <Link to="/contact"><li>Contact</li></Link>  
+
     </ul>
     </div>
     {isLoggedIn ? (

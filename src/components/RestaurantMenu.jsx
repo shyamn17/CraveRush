@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {IMG_CDN} from "./config";
 
 const RestaurantMenu=()=>{
-    const {id}= useParams();
+    const {resid}= useParams();
 
     const [restaurant, setRestaurant]=useState({});
     

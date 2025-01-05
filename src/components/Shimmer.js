@@ -1,4 +1,4 @@
-import "./Home.css"; // Add a separate CSS file for shimmer styles
+import "../../Home.css"; // Add a separate CSS file for shimmer styles
 
 const Shimmer = () => {
   return (

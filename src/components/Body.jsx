@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { restaurantList } from "./config.js";
 import Items from "./Items";
 import Shimmer from "./Shimmer.js";
+import "../../Home.css"
 
 function filterData(searchtxt, restaurants) {
   return restaurants.filter((restaurant) =>
@@ -24,8 +25,9 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
+      console.log(json)
       const restaurantsData =
-        json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+        json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
       setRestaurants(restaurantsData);
       setFilteredRestaurants(restaurantsData); 
     } catch (error) {
@@ -39,8 +41,9 @@ const Body = () => {
   };
 
   if(!restaurants) return null;
-// if(filteredRestaurants?.length===0)
-//   return <h1>No restaurants found</h1>;
+
+if(filteredRestaurants?.length===0)
+  return <h1>No restaurants found!!</h1>;
 
 return restaurants?.length === 0 ? (
   <Shimmer />

@@ -1,14 +1,16 @@
 .header{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
+  display:flex;
+  justify-content:space-between;
+  margin: 10px;
+    border: 1px solid black;
 }
-.nav-items>ul{
-    display: flex;
-    list-style: none;
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
 }
-.nav-items>ul>li{
-    padding: 20px;
+
+.nav-items > ul > li {
+  padding: 10px;
 }
 .logo{
     width: 100px;

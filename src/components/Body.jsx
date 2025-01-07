@@ -3,7 +3,7 @@ import { restaurantList } from "./config.js";
 import Items from "./Items";
 import Shimmer from "./Shimmer.js";
 import "../../Home.css"
-
+import {Link} from "react-router-dom"
 function filterData(searchtxt, restaurants) {
   return restaurants.filter((restaurant) =>
     restaurant.info.name.toLowerCase().includes(searchtxt.toLowerCase())
@@ -63,7 +63,8 @@ return restaurants?.length === 0 ? (
 
       <div className="lists">
         {filteredRestaurants.map((restaurant) => (
-          <Items {...restaurant.info} key={restaurant.info.id} />
+          <Link to={"/restaurant/"+ restaurant.info.id} key={restaurant.info.id}>
+            <Items {...restaurant.info}  /></Link>
         ))}
       </div>
     </>

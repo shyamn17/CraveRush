@@ -1,4 +1,5 @@
-import { IMG_CDN } from "./config";
+ import {IMG_CDN}  from "../Services/Endpoints";
+
 const Items = ({
   name,
   cuisines,

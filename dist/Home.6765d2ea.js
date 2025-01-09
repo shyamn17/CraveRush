@@ -2966,28 +2966,30 @@ var _contact = require("./components/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _restaurantMenu = require("./components/RestaurantMenu");
 var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
+var _profile = require("./components/Profile");
+var _profileDefault = parcelHelpers.interopDefault(_profile);
 const AppComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).Fragment, {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/Home.js",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 8
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/Home.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 8
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/Home.js",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 8
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Home.js",
-        lineNumber: 14,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined);
 };
@@ -2997,12 +2999,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppComponent, {}, void 0, false, {
             fileName: "src/Home.js",
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 16
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/Home.js",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 21
         }, undefined),
         children: [
@@ -3010,7 +3012,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 30,
+                    lineNumber: 31,
                     columnNumber: 22
                 }, undefined)
             },
@@ -3018,15 +3020,25 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 34,
+                    lineNumber: 35,
                     columnNumber: 22
-                }, undefined)
+                }, undefined),
+                children: [
+                    {
+                        path: "profile",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
+                            fileName: "src/Home.js",
+                            lineNumber: 38,
+                            columnNumber: 24
+                        }, undefined)
+                    }
+                ]
             },
             {
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 38,
+                    lineNumber: 43,
                     columnNumber: 22
                 }, undefined)
             },
@@ -3034,7 +3046,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurant/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 42,
+                    lineNumber: 47,
                     columnNumber: 22
                 }, undefined)
             }
@@ -3046,7 +3058,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/Home.js",
-    lineNumber: 50,
+    lineNumber: 55,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3057,7 +3069,7 @@ $RefreshReg$(_c, "AppComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"knC38","./components/Footer":"2OVeV","./components/Body":"hHUrP","react-router-dom":"9xmpe","./components/About":"hkKyJ","./components/Error":"cKXa2","./components/Contact":"25EXR","./components/RestaurantMenu":"ixexi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"knC38","./components/Footer":"2OVeV","./components/Body":"hHUrP","react-router-dom":"9xmpe","./components/About":"hkKyJ","./components/Error":"cKXa2","./components/Contact":"25EXR","./components/RestaurantMenu":"ixexi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Profile":"5QmVt"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -27314,6 +27326,8 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _homeCss = require("../../Home.css");
+var _logoJpg = require("./Assets/logo.jpg");
+var _logoJpgDefault = parcelHelpers.interopDefault(_logoJpg);
 var _s = $RefreshSig$();
 const Title = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27321,15 +27335,15 @@ const Title = ()=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             className: "logo",
             alt: "logo",
-            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSicjVAlj83VbE9otiuKD1oF_JS1G_PHFxLOw&s"
+            src: (0, _logoJpgDefault.default)
         }, void 0, false, {
             fileName: "src/components/Header.jsx",
-            lineNumber: 8,
+            lineNumber: 9,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.jsx",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 9
     }, undefined);
 };
@@ -27342,7 +27356,7 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27355,20 +27369,6 @@ const Header = ()=>{
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.jsx",
-                                lineNumber: 25,
-                                columnNumber: 9
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.jsx",
-                            lineNumber: 25,
-                            columnNumber: 5
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/about",
-                                children: "About Us"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.jsx",
                                 lineNumber: 26,
                                 columnNumber: 9
                             }, undefined)
@@ -27379,8 +27379,8 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/",
-                                children: "Cart"
+                                to: "/about",
+                                children: "About Us"
                             }, void 0, false, {
                                 fileName: "src/components/Header.jsx",
                                 lineNumber: 27,
@@ -27393,8 +27393,8 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/contact",
-                                children: "Contact"
+                                to: "/",
+                                children: "Cart"
                             }, void 0, false, {
                                 fileName: "src/components/Header.jsx",
                                 lineNumber: 28,
@@ -27404,16 +27404,30 @@ const Header = ()=>{
                             fileName: "src/components/Header.jsx",
                             lineNumber: 28,
                             columnNumber: 5
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.jsx",
+                                lineNumber: 29,
+                                columnNumber: 9
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.jsx",
+                            lineNumber: 29,
+                            columnNumber: 5
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.jsx",
-                    lineNumber: 24,
+                    lineNumber: 25,
                     columnNumber: 5
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 5
             }, undefined),
             isLoggedIn ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27421,20 +27435,20 @@ const Header = ()=>{
                 children: "Logout"
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 5
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>setisLoggedIn(true),
                 children: "Login "
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.jsx",
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 9
     }, undefined);
 };
@@ -27450,7 +27464,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../Home.css":"8KkO4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../Home.css":"8KkO4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Assets/logo.jpg":"2bFYx"}],"9xmpe":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.28.0
  *
@@ -34832,6 +34846,44 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
+},{}],"2bFYx":[function(require,module,exports,__globalThis) {
+module.exports = require("582b4c51f4fd09b7").getBundleURL('cBNhz') + "logo.99316a6a.jpg" + "?" + Date.now();
+
+},{"582b4c51f4fd09b7":"lgJ39"}],"lgJ39":[function(require,module,exports,__globalThis) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
 },{}],"2OVeV":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$66c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -34879,6 +34931,9 @@ var _shimmerJs = require("./Shimmer.js");
 var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
 var _homeCss = require("../../Home.css");
 var _reactRouterDom = require("react-router-dom");
+var _endpoints = require("../Services/Endpoints");
+var _useOnline = require("../Hooks/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
 var _s = $RefreshSig$();
 function filterData(searchtxt, restaurants) {
     return restaurants.filter((restaurant)=>restaurant.info.name.toLowerCase().includes(searchtxt.toLowerCase()));
@@ -34893,7 +34948,7 @@ const Body = ()=>{
     }, []);
     const getRestaurants = async ()=>{
         try {
-            const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+            const data = await fetch((0, _endpoints.RESTAURANTS));
             const json = await data.json();
             console.log(json);
             const restaurantsData = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
@@ -34907,17 +34962,25 @@ const Body = ()=>{
         const filteredData = filterData(searchtxt, restaurants);
         setFilteredRestaurants(filteredData);
     };
-    if (!restaurants) return null;
-    if (filteredRestaurants?.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "No restaurants found!!"
+    const isOnline = (0, _useOnlineDefault.default)();
+    if (!isOnline) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+        children: "\u26D4Uh-oh, it looks like you\u2019re offline. Please check your network to explore food options."
     }, void 0, false, {
         fileName: "src/components/Body.jsx",
         lineNumber: 46,
+        columnNumber: 12
+    }, undefined);
+    if (!restaurants) return null;
+    if (filteredRestaurants?.length === 0 && searchtxt !== "") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "No restaurants found!!"
+    }, void 0, false, {
+        fileName: "src/components/Body.jsx",
+        lineNumber: 52,
         columnNumber: 10
     }, undefined);
     return restaurants?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 49,
+        lineNumber: 55,
         columnNumber: 3
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -34929,7 +34992,7 @@ const Body = ()=>{
                 onChange: (e)=>setSearchtxt(e.target.value)
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 52,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34938,7 +35001,7 @@ const Body = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 60,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34949,23 +35012,27 @@ const Body = ()=>{
                             ...restaurant.info
                         }, void 0, false, {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 67,
+                            lineNumber: 71,
                             columnNumber: 13
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 66,
+                        lineNumber: 70,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 64,
+                lineNumber: 68,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "68W4kBJeehEuFaSmEdSaMAOW7IY=");
+_s(Body, "Sb8bBr4K91ICves0MhMHvHw5DXM=", false, function() {
+    return [
+        (0, _useOnlineDefault.default)
+    ];
+});
 _c = Body;
 exports.default = Body;
 var _c;
@@ -34976,12 +35043,1803 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./config.js":"4T6KH","./Items":"d5cq0","./Shimmer.js":"g6ZGj","../../Home.css":"8KkO4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"4T6KH":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./config.js":"4T6KH","./Items":"d5cq0","./Shimmer.js":"g6ZGj","../../Home.css":"8KkO4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","../Services/Endpoints":"9AqmV","../Hooks/useOnline":"a0LSv"}],"4T6KH":[function(require,module,exports,__globalThis) {
+// export const restaurantList = [
+//     {
+//       "info": {
+//         "id": "10575",
+//         "name": "Pizza Hut",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/5b9c53df-e0cb-48fc-ac31-f02735592edc_10575.jpg",
+//         "locality": "Richmond Town",
+//         "areaName": "Shanti Nagar",
+//         "costForTwo": "₹600 for two",
+//         "cuisines": [
+//           "Pizzas"
+//         ],
+//         "avgRating": 4.3,
+//         "parentId": "721",
+//         "avgRatingString": "4.3",
+//         "totalRatingsString": "10K+",
+//         "sla": {
+//           "deliveryTime": 32,
+//           "lastMileTravel": 2,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "30-35 mins",
+//           "lastMileTravelString": "2.0 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 01:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "ITEMS",
+//           "subHeader": "AT ₹99"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "4.1",
+//             "ratingCount": "1.7K+"
+//           },
+//           "source": "GOOGLE",
+//           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/pizza-hut-richmond-town-shanti-nagar-rest10575",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "822315",
+//         "name": "Subway",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/24/3ab699af-9b2c-4107-9d66-88c5e4e540ae_822315.JPG",
+//         "locality": "Langford Road",
+//         "areaName": "Richmond Town",
+//         "costForTwo": "₹350 for two",
+//         "cuisines": [
+//           "sandwich",
+//           "Salads",
+//           "wrap",
+//           "Healthy Food"
+//         ],
+//         "avgRating": 4.4,
+//         "parentId": "2",
+//         "avgRatingString": "4.4",
+//         "totalRatingsString": "637",
+//         "sla": {
+//           "deliveryTime": 25,
+//           "lastMileTravel": 2.1,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "20-25 mins",
+//           "lastMileTravelString": "2.1 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 01:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "Rxawards/_CATEGORY-Sandwiches.png",
+//               "description": "Delivery!"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Delivery!",
+//                     "imageId": "Rxawards/_CATEGORY-Sandwiches.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "ITEMS",
+//           "subHeader": "AT ₹119"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/subway-langford-road-richmond-town-rest822315",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "432976",
+//         "name": "KFC",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/5/0c0221a0-018a-4ef5-a4a4-e22ffe28aa95_432976.JPG",
+//         "locality": "Double Road",
+//         "areaName": "Shanti Nagar",
+//         "costForTwo": "₹400 for two",
+//         "cuisines": [
+//           "Burgers",
+//           "Fast Food",
+//           "Rolls & Wraps"
+//         ],
+//         "avgRating": 4.3,
+//         "parentId": "547",
+//         "avgRatingString": "4.3",
+//         "totalRatingsString": "3.6K+",
+//         "sla": {
+//           "deliveryTime": 23,
+//           "lastMileTravel": 1.9,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "20-25 mins",
+//           "lastMileTravelString": "1.9 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-07 23:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "10% OFF",
+//           "subHeader": "UPTO ₹40"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/kfc-double-road-shanti-nagar-rest432976",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "77949",
+//         "name": "Burger King",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/4ee8bc77-ca9f-41bd-a0f3-511c70902b91_77949.JPG",
+//         "locality": "Gandhi Bazar",
+//         "areaName": "Basavanagudi",
+//         "costForTwo": "₹350 for two",
+//         "cuisines": [
+//           "Burgers",
+//           "American"
+//         ],
+//         "avgRating": 4.3,
+//         "parentId": "166",
+//         "avgRatingString": "4.3",
+//         "totalRatingsString": "32K+",
+//         "sla": {
+//           "deliveryTime": 32,
+//           "lastMileTravel": 3.6,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "30-35 mins",
+//           "lastMileTravelString": "3.6 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-07 23:59:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "Rxawards/_CATEGORY-Burger.png",
+//               "description": "Delivery!"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Delivery!",
+//                     "imageId": "Rxawards/_CATEGORY-Burger.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "60% OFF",
+//           "subHeader": "UPTO ₹120"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/burger-king-gandhi-bazar-basavanagudi-rest77949",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "6924",
+//         "name": "FreshMenu",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/12/6d758a42-634e-4b3e-809f-876d0ee8e44a_6924.JPG",
+//         "locality": "Johnson Market",
+//         "areaName": "Richmond Road",
+//         "costForTwo": "₹250 for two",
+//         "cuisines": [
+//           "Continental",
+//           "Chinese",
+//           "Oriental",
+//           "Asian",
+//           "Healthy Food",
+//           "Fast Food",
+//           "Indian",
+//           "Desserts"
+//         ],
+//         "avgRating": 4.4,
+//         "parentId": "398",
+//         "avgRatingString": "4.4",
+//         "totalRatingsString": "59K+",
+//         "sla": {
+//           "deliveryTime": 39,
+//           "lastMileTravel": 2.7,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "35-40 mins",
+//           "lastMileTravelString": "2.7 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-07 23:59:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "textExtendedBadges": [
+//             {
+//               "iconId": "guiltfree/GF_Logo_android_3x",
+//               "shortDescription": "options available",
+//               "fontColor": "#7E808C"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "",
+//                     "fontColor": "#7E808C",
+//                     "iconId": "guiltfree/GF_Logo_android_3x",
+//                     "shortDescription": "options available"
+//                   }
+//                 }
+//               ]
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "ITEMS",
+//           "subHeader": "AT ₹69"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/freshmenu-johnson-market-richmond-road-rest6924",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "23846",
+//         "name": "Domino's Pizza",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/29/bc7d25a1-b576-4540-a951-585519799529_23846.jpg",
+//         "locality": "Rehinus Street",
+//         "areaName": "Richmond Town",
+//         "costForTwo": "₹400 for two",
+//         "cuisines": [
+//           "Pizzas",
+//           "Italian",
+//           "Pastas",
+//           "Desserts"
+//         ],
+//         "avgRating": 4.3,
+//         "parentId": "2456",
+//         "avgRatingString": "4.3",
+//         "totalRatingsString": "17K+",
+//         "sla": {
+//           "deliveryTime": 25,
+//           "lastMileTravel": 2.4,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "20-25 mins",
+//           "lastMileTravelString": "2.4 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 02:59:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "Rxawards/_CATEGORY-Pizza.png",
+//               "description": "Delivery!"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Delivery!",
+//                     "imageId": "Rxawards/_CATEGORY-Pizza.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "ITEMS",
+//           "subHeader": "AT ₹249"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "3.8",
+//             "ratingCount": "2.3K+"
+//           },
+//           "source": "GOOGLE",
+//           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/dominos-pizza-rehinus-street-richmond-town-rest23846",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "197238",
+//         "name": "The Belgian Waffle Co.",
+//         "cloudinaryImageId": "5116a385bac0548e06c33c08350fbf11",
+//         "locality": "SRI Vasavi Temple Street",
+//         "areaName": "Basavanagudi",
+//         "costForTwo": "₹200 for two",
+//         "cuisines": [
+//           "Waffle",
+//           "Desserts",
+//           "Ice Cream",
+//           "Beverages"
+//         ],
+//         "avgRating": 4.6,
+//         "veg": true,
+//         "parentId": "2233",
+//         "avgRatingString": "4.6",
+//         "totalRatingsString": "4.3K+",
+//         "sla": {
+//           "deliveryTime": 39,
+//           "lastMileTravel": 2,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "35-40 mins",
+//           "lastMileTravelString": "2.0 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 01:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "Green%20Dot%20Awards/Best%20In%20Waffle.png",
+//               "description": "Delivery!"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Delivery!",
+//                     "imageId": "Green%20Dot%20Awards/Best%20In%20Waffle.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "20% OFF",
+//           "subHeader": "UPTO ₹50"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/the-belgian-waffle-co-sri-vasavi-temple-street-basavanagudi-rest197238",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "697144",
+//         "name": "Baskin Robbins - Ice Cream Desserts",
+//         "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
+//         "locality": "GARUDA MALL",
+//         "areaName": "MAGARATH ROAD",
+//         "costForTwo": "₹250 for two",
+//         "cuisines": [
+//           "Desserts",
+//           "Ice Cream"
+//         ],
+//         "avgRating": 4.6,
+//         "veg": true,
+//         "parentId": "5588",
+//         "avgRatingString": "4.6",
+//         "totalRatingsString": "246",
+//         "sla": {
+//           "deliveryTime": 45,
+//           "lastMileTravel": 3.8,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "45-50 mins",
+//           "lastMileTravelString": "3.8 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-07 23:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "50% OFF",
+//           "subHeader": "UPTO ₹100"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/baskin-robbins-ice-cream-desserts-garuda-mall-magarath-road-rest697144",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "502957",
+//         "name": "Andhra Gunpowder",
+//         "cloudinaryImageId": "bs9qgsy25pn07pzn6xx1",
+//         "locality": "Shivananda Circle",
+//         "areaName": "Seshadripuram",
+//         "costForTwo": "₹350 for two",
+//         "cuisines": [
+//           "Andhra",
+//           "Biryani",
+//           "South Indian"
+//         ],
+//         "avgRating": 4.6,
+//         "parentId": "10496",
+//         "avgRatingString": "4.6",
+//         "totalRatingsString": "2.4K+",
+//         "sla": {
+//           "deliveryTime": 34,
+//           "lastMileTravel": 4.3,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "30-35 mins",
+//           "lastMileTravelString": "4.3 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 00:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "Rxawards/_CATEGORY-Andhra.png",
+//               "description": "Delivery!"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Delivery!",
+//                     "imageId": "Rxawards/_CATEGORY-Andhra.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "20% OFF",
+//           "subHeader": "UPTO ₹50"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/andhra-gunpowder-shivananda-circle-seshadripuram-rest502957",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "643832",
+//         "name": "WeFit - Protein Bowls, Salads & Sandwiches",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/30/59e251dc-b6d9-4566-97c3-931b83ef7061_643832.JPG",
+//         "locality": "Langford Road",
+//         "areaName": "Santhinagar",
+//         "costForTwo": "₹250 for two",
+//         "cuisines": [
+//           "Healthy Food",
+//           "Salads",
+//           "Keto",
+//           "Snacks"
+//         ],
+//         "avgRating": 4.7,
+//         "parentId": "355285",
+//         "avgRatingString": "4.7",
+//         "totalRatingsString": "560",
+//         "sla": {
+//           "deliveryTime": 25,
+//           "lastMileTravel": 1.9,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "20-30 mins",
+//           "lastMileTravelString": "1.9 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 02:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "textExtendedBadges": [
+//             {
+//               "iconId": "guiltfree/GF_Logo_android_3x",
+//               "shortDescription": "brand",
+//               "fontColor": "#7E808C"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "",
+//                     "fontColor": "#7E808C",
+//                     "iconId": "guiltfree/GF_Logo_android_3x",
+//                     "shortDescription": "brand"
+//                   }
+//                 }
+//               ]
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "₹125 OFF",
+//           "subHeader": "ABOVE ₹299",
+//           "discountTag": "FLAT DEAL"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/wefit-protein-bowls-salads-and-sandwiches-langford-road-santhinagar-rest643832",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "750396",
+//         "name": "Daily Kitchen - Homely Meals",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/5/19/741d7d41-1341-4358-b6e0-cc22b8e82f9a_750396.JPG",
+//         "locality": "Lakshmi Road",
+//         "areaName": "Langford Road",
+//         "costForTwo": "₹250 for two",
+//         "cuisines": [
+//           "Home Food",
+//           "Indian",
+//           "North Indian",
+//           "Thalis"
+//         ],
+//         "avgRating": 4.5,
+//         "parentId": "444382",
+//         "avgRatingString": "4.5",
+//         "totalRatingsString": "474",
+//         "sla": {
+//           "deliveryTime": 15,
+//           "lastMileTravel": 1.9,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "10-20 mins",
+//           "lastMileTravelString": "1.9 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 02:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "textExtendedBadges": [
+//             {
+//               "iconId": "guiltfree/GF_Logo_android_3x",
+//               "shortDescription": "options available",
+//               "fontColor": "#7E808C"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "",
+//                     "fontColor": "#7E808C",
+//                     "iconId": "guiltfree/GF_Logo_android_3x",
+//                     "shortDescription": "options available"
+//                   }
+//                 }
+//               ]
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "₹125 OFF",
+//           "subHeader": "ABOVE ₹299",
+//           "discountTag": "FLAT DEAL"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/daily-kitchen-homely-meals-lakshmi-road-langford-road-rest750396",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "503002",
+//         "name": "NH1 Bowls - Highway To North",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/8/aea607a6-5ce6-4fe6-b7d1-7ba2bacdc647_503002.jpg",
+//         "locality": "Lakshmi Road",
+//         "areaName": "Shanti Nagar",
+//         "costForTwo": "₹250 for two",
+//         "cuisines": [
+//           "North Indian",
+//           "Punjabi",
+//           "Home Food"
+//         ],
+//         "avgRating": 4.7,
+//         "parentId": "22452",
+//         "avgRatingString": "4.7",
+//         "totalRatingsString": "657",
+//         "sla": {
+//           "deliveryTime": 15,
+//           "lastMileTravel": 1.9,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "10-20 mins",
+//           "lastMileTravelString": "1.9 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 02:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "textExtendedBadges": [
+//             {
+//               "iconId": "guiltfree/GF_Logo_android_3x",
+//               "shortDescription": "options available",
+//               "fontColor": "#7E808C"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "",
+//                     "fontColor": "#7E808C",
+//                     "iconId": "guiltfree/GF_Logo_android_3x",
+//                     "shortDescription": "options available"
+//                   }
+//                 }
+//               ]
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "₹125 OFF",
+//           "subHeader": "ABOVE ₹299",
+//           "discountTag": "FLAT DEAL"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/nh1-bowls-highway-to-north-lakshmi-road-shanti-nagar-rest503002",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "43836",
+//         "name": "McDonald's",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/18/5e7991d9-6a0d-4034-82a9-59bd2bbdc0b3_43836.jpg",
+//         "locality": "MG Road",
+//         "areaName": "Ashok Nagar",
+//         "costForTwo": "₹400 for two",
+//         "cuisines": [
+//           "Burgers",
+//           "Beverages",
+//           "Cafe",
+//           "Desserts"
+//         ],
+//         "avgRating": 4.4,
+//         "parentId": "630",
+//         "avgRatingString": "4.4",
+//         "totalRatingsString": "25K+",
+//         "sla": {
+//           "deliveryTime": 29,
+//           "lastMileTravel": 2.5,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "25-30 mins",
+//           "lastMileTravelString": "2.5 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 02:45:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "Rxawards/_CATEGORY-Burger.png",
+//               "description": "Delivery!"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Delivery!",
+//                     "imageId": "Rxawards/_CATEGORY-Burger.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "₹125 OFF",
+//           "subHeader": "ABOVE ₹549",
+//           "discountTag": "FLAT DEAL"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/mcdonalds-mg-road-ashok-nagar-rest43836",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "570511",
+//         "name": "Bakingo",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/7/c795c5d6-96d4-409a-8106-3c3ba1f4253c_570511.JPG",
+//         "locality": "Puhlong X-road",
+//         "areaName": "Vasanth Nagar",
+//         "costForTwo": "₹299 for two",
+//         "cuisines": [
+//           "Bakery",
+//           "Desserts",
+//           "Beverages",
+//           "Snacks"
+//         ],
+//         "avgRating": 4.6,
+//         "parentId": "3818",
+//         "avgRatingString": "4.6",
+//         "totalRatingsString": "3.7K+",
+//         "sla": {
+//           "deliveryTime": 34,
+//           "lastMileTravel": 6.1,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "30-35 mins",
+//           "lastMileTravelString": "6.1 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 01:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "20% OFF",
+//           "subHeader": "ABOVE ₹3000",
+//           "discountTag": "FLAT DEAL"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/bakingo-puhlong-x-road-vasanth-nagar-rest570511",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "124178",
+//         "name": "Starbucks Coffee",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/2/b5efcf36-38ae-4c55-849a-56ff063d62d8_124178.JPG",
+//         "locality": "Lavelle Road",
+//         "areaName": "Lavelle Road",
+//         "costForTwo": "₹400 for two",
+//         "cuisines": [
+//           "Beverages",
+//           "Cafe",
+//           "Snacks",
+//           "Desserts",
+//           "Bakery",
+//           "Ice Cream"
+//         ],
+//         "avgRating": 4.5,
+//         "parentId": "195515",
+//         "avgRatingString": "4.5",
+//         "totalRatingsString": "2.3K+",
+//         "sla": {
+//           "deliveryTime": 26,
+//           "lastMileTravel": 2.3,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "25-30 mins",
+//           "lastMileTravelString": "2.3 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-07 23:59:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "textExtendedBadges": [
+//             {
+//               "iconId": "guiltfree/GF_Logo_android_3x",
+//               "shortDescription": "options available",
+//               "fontColor": "#7E808C"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "",
+//                     "fontColor": "#7E808C",
+//                     "iconId": "guiltfree/GF_Logo_android_3x",
+//                     "shortDescription": "options available"
+//                   }
+//                 }
+//               ]
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "30% OFF",
+//           "subHeader": "UPTO ₹75"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "4.5",
+//             "ratingCount": "1.9K+"
+//           },
+//           "source": "GOOGLE",
+//           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/starbucks-coffee-lavelle-road-rest124178",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "440123",
+//         "name": "Great Indian Khichdi by EatFit",
+//         "cloudinaryImageId": "6e44fd7f1e5cd9967edfe47c10247671",
+//         "locality": "VASANTHA NAGAR",
+//         "areaName": "Cunningham Road",
+//         "costForTwo": "₹200 for two",
+//         "cuisines": [
+//           "Home Food",
+//           "Indian",
+//           "North Indian",
+//           "Healthy Food",
+//           "Snacks",
+//           "Desserts",
+//           "Rajasthani",
+//           "South Indian",
+//           "Maharashtrian",
+//           "Sweets"
+//         ],
+//         "avgRating": 4.6,
+//         "veg": true,
+//         "parentId": "319582",
+//         "avgRatingString": "4.6",
+//         "totalRatingsString": "1.8K+",
+//         "sla": {
+//           "deliveryTime": 32,
+//           "lastMileTravel": 4.1,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "30-35 mins",
+//           "lastMileTravelString": "4.1 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 01:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "Green%20Dot%20Awards/Best%20In%20Vegan.png",
+//               "description": "Delivery!"
+//             },
+//             {
+//               "imageId": "v1695133679/badges/Pure_Veg111.png",
+//               "description": "pureveg"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Delivery!",
+//                     "imageId": "Green%20Dot%20Awards/Best%20In%20Vegan.png"
+//                   }
+//                 },
+//                 {
+//                   "attributes": {
+//                     "description": "pureveg",
+//                     "imageId": "v1695133679/badges/Pure_Veg111.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "ITEMS",
+//           "subHeader": "AT ₹99"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/great-indian-khichdi-by-eatfit-vasantha-nagar-cunningham-road-rest440123",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "503003",
+//         "name": "ZAZA Mughal Biryani",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/17/d26bdfca-3b50-41ea-87e1-e7f9a6b0581d_503003.jpg",
+//         "locality": "Lakshmi Nagar Road",
+//         "areaName": "Shanti Nagar",
+//         "costForTwo": "₹250 for two",
+//         "cuisines": [
+//           "Biryani",
+//           "North Indian",
+//           "Awadhi"
+//         ],
+//         "avgRating": 4.5,
+//         "parentId": "22473",
+//         "avgRatingString": "4.5",
+//         "totalRatingsString": "478",
+//         "sla": {
+//           "deliveryTime": 15,
+//           "lastMileTravel": 1.9,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "10-20 mins",
+//           "lastMileTravelString": "1.9 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 02:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "textExtendedBadges": [
+//             {
+//               "iconId": "guiltfree/GF_Logo_android_3x",
+//               "shortDescription": "options available",
+//               "fontColor": "#7E808C"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "",
+//                     "fontColor": "#7E808C",
+//                     "iconId": "guiltfree/GF_Logo_android_3x",
+//                     "shortDescription": "options available"
+//                   }
+//                 }
+//               ]
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "₹125 OFF",
+//           "subHeader": "ABOVE ₹299",
+//           "discountTag": "FLAT DEAL"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/zaza-mughal-biryani-lakshmi-nagar-road-shanti-nagar-rest503003",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "393107",
+//         "name": "EatFit",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/6/09dedbc6-e4eb-4fff-8b45-c825b0f18e14_393107.jpg",
+//         "locality": "VASANTHA NAGAR",
+//         "areaName": "Cunningham Road",
+//         "costForTwo": "₹270 for two",
+//         "cuisines": [
+//           "Chinese",
+//           "Healthy Food",
+//           "Tandoor",
+//           "Pizzas",
+//           "North Indian",
+//           "Thalis",
+//           "Biryani"
+//         ],
+//         "avgRating": 4.5,
+//         "parentId": "76139",
+//         "avgRatingString": "4.5",
+//         "totalRatingsString": "5.4K+",
+//         "sla": {
+//           "deliveryTime": 30,
+//           "lastMileTravel": 4.1,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "30-35 mins",
+//           "lastMileTravelString": "4.1 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-08 01:00:00",
+//           "opened": true
+//         },
+//         "badges": {
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "ITEMS",
+//           "subHeader": "AT ₹99"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "--"
+//           }
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/eatfit-vasantha-nagar-cunningham-road-rest393107",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "41105",
+//         "name": "Nandhini Deluxe",
+//         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/3/c70fe58c-9c46-442d-8787-00c68f765b26_41105.jpg",
+//         "locality": "Kadubisanahalli",
+//         "areaName": "Basavanagudi",
+//         "costForTwo": "₹550 for two",
+//         "cuisines": [
+//           "Andhra",
+//           "Chinese"
+//         ],
+//         "avgRating": 4.3,
+//         "parentId": "2451",
+//         "avgRatingString": "4.3",
+//         "totalRatingsString": "14K+",
+//         "sla": {
+//           "deliveryTime": 29,
+//           "lastMileTravel": 1.7,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "25-30 mins",
+//           "lastMileTravelString": "1.7 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-07 23:59:00",
+//           "opened": true
+//         },
+//         "badges": {
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "₹100 OFF",
+//           "subHeader": "ABOVE ₹749",
+//           "discountTag": "FLAT DEAL"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "3.9",
+//             "ratingCount": "2.1K+"
+//           },
+//           "source": "GOOGLE",
+//           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/nandhini-deluxe-kadubisanahalli-basavanagudi-rest41105",
+//         "type": "WEBLINK"
+//       }
+//     },
+//     {
+//       "info": {
+//         "id": "19361",
+//         "name": "Pasta Street",
+//         "cloudinaryImageId": "aecff12704ebe42606524c852f9ab0e4",
+//         "locality": "Cunningham Road",
+//         "areaName": "Cunningham Road",
+//         "costForTwo": "₹900 for two",
+//         "cuisines": [
+//           "Italian",
+//           "Pastas",
+//           "Pizzas",
+//           "Desserts"
+//         ],
+//         "avgRating": 4.5,
+//         "parentId": "2872",
+//         "avgRatingString": "4.5",
+//         "totalRatingsString": "7.4K+",
+//         "sla": {
+//           "deliveryTime": 34,
+//           "lastMileTravel": 3.8,
+//           "serviceability": "SERVICEABLE",
+//           "slaString": "30-35 mins",
+//           "lastMileTravelString": "3.8 km",
+//           "iconType": "ICON_TYPE_EMPTY"
+//         },
+//         "availability": {
+//           "nextCloseTime": "2024-12-07 23:30:00",
+//           "opened": true
+//         },
+//         "badges": {
+//           "imageBadges": [
+//             {
+//               "imageId": "newg.png",
+//               "description": "Gourmet"
+//             }
+//           ]
+//         },
+//         "isOpen": true,
+//         "type": "F",
+//         "badgesV2": {
+//           "entityBadges": {
+//             "imageBased": {
+//               "badgeObject": [
+//                 {
+//                   "attributes": {
+//                     "description": "Gourmet",
+//                     "imageId": "newg.png"
+//                   }
+//                 }
+//               ]
+//             },
+//             "textBased": {
+//             },
+//             "textExtendedBadges": {
+//             }
+//           }
+//         },
+//         "aggregatedDiscountInfoV3": {
+//           "header": "60% OFF",
+//           "subHeader": "UPTO ₹120"
+//         },
+//         "differentiatedUi": {
+//           "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+//           "differentiatedUiMediaDetails": {
+//             "lottie": {
+//             },
+//             "video": {
+//             }
+//           }
+//         },
+//         "reviewsSummary": {
+//         },
+//         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+//         "restaurantOfferPresentationInfo": {
+//         },
+//         "externalRatings": {
+//           "aggregatedRating": {
+//             "rating": "4.4",
+//             "ratingCount": "4.2K+"
+//           },
+//           "source": "GOOGLE",
+//           "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+//         },
+//         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+//       },
+//       "analytics": {
+//         "context": "seo-data-8b3ddb94-36f1-4298-83d8-14d12b76b69f"
+//       },
+//       "cta": {
+//         "link": "https://www.swiggy.com/city/bangalore/pasta-street-cunningham-road-rest19361",
+//         "type": "WEBLINK"
+//       }
+//     }
+//   ]
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IMG_CDN", ()=>IMG_CDN);
 parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
-const IMG_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 const restaurantList = [
     {
         type: "restaurant",
@@ -35746,43 +37604,43 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _config = require("./config");
+var _endpoints = require("../Services/Endpoints");
 const Items = ({ name, cuisines, cloudinaryImageId, avgRating })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _config.IMG_CDN) + cloudinaryImageId
+                src: (0, _endpoints.IMG_CDN) + cloudinaryImageId
             }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: name
             }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: cuisines.join(", ")
             }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: avgRating
             }, void 0, false, {
                 fileName: "src/components/Items.jsx",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Items.jsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
@@ -35796,7 +37654,17 @@ $RefreshReg$(_c, "Items");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./config":"4T6KH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Services/Endpoints":"9AqmV"}],"9AqmV":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN", ()=>IMG_CDN);
+parcelHelpers.export(exports, "RESTAURANT_MENU", ()=>RESTAURANT_MENU);
+parcelHelpers.export(exports, "RESTAURANTS", ()=>RESTAURANTS);
+const IMG_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+const RESTAURANT_MENU = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId=";
+const RESTAURANTS = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35833,7 +37701,45 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../../Home.css":"8KkO4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8KkO4":[function() {},{}],"8KkO4":[function() {},{}],"hkKyJ":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","../../Home.css":"8KkO4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8KkO4":[function() {},{}],"8KkO4":[function() {},{}],"a0LSv":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6b00 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6b00.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useOnline = ()=>{
+    _s();
+    const [isOnline, setIsOnline] = (0, _react.useState)(true);
+    const handleOnline = ()=>{
+        setIsOnline(true);
+    };
+    const handleOffline = ()=>{
+        setIsOnline(false);
+    };
+    (0, _react.useEffect)(()=>{
+        window.addEventListener("online", handleOnline);
+        window.addEventListener("offline", handleOffline);
+        return ()=>{
+            window.removeEventListener("online", handleOnline);
+            window.removeEventListener("offline", handleOffline);
+        };
+    }, []);
+    return isOnline;
+};
+_s(useOnline, "tQ+jeuTfaQWyt2cny0PnlZvq2jE=");
+exports.default = useOnline;
+
+  $parcel$ReactRefreshHelpers$6b00.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hkKyJ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$42ed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35845,27 +37751,111 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "About Us"
-        }, void 0, false, {
+var _reactRouterDom = require("react-router-dom");
+var _profile = require("./Profile");
+var _profileDefault = parcelHelpers.interopDefault(_profile);
+// const About = () => {
+//   return (
+//     <div>
+//       <h1>About Us</h1>
+//     </div>
+//   )
+// }
+// export default About;
+class About extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            userInfo: {
+                name: "sample",
+                location: "abc"
+            }
+        };
+    }
+    async componentDidMount() {
+        const data = await fetch("https://api.github.com/users/akshaymarch7");
+        const json = await data.json();
+        this.setState({
+            userInfo: json
+        });
+    }
+    render() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "About Us"
+                }, void 0, false, {
+                    fileName: "src/components/About.jsx",
+                    lineNumber: 36,
+                    columnNumber: 3
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: this.state.userInfo.name
+                }, void 0, false, {
+                    fileName: "src/components/About.jsx",
+                    lineNumber: 37,
+                    columnNumber: 3
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: this.state.userInfo.avatar_url
+                }, void 0, false, {
+                    fileName: "src/components/About.jsx",
+                    lineNumber: 38,
+                    columnNumber: 3
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: this.state.userInfo.location
+                }, void 0, false, {
+                    fileName: "src/components/About.jsx",
+                    lineNumber: 39,
+                    columnNumber: 3
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
+                    fileName: "src/components/About.jsx",
+                    lineNumber: 40,
+                    columnNumber: 1
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "src/components/About.jsx",
-            lineNumber: 6,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/About.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, undefined);
-};
-_c = About;
+            lineNumber: 35,
+            columnNumber: 3
+        }, this);
+    }
+}
 exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$42ed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./Profile":"5QmVt"}],"5QmVt":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$02ba = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$02ba.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class Profile extends (0, _reactDefault.default).Component {
+    render() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+            children: "Profile"
+        }, void 0, false, {
+            fileName: "src/components/Profile.jsx",
+            lineNumber: 5,
+            columnNumber: 16
+        }, this);
+    }
+}
+exports.default = Profile;
+
+  $parcel$ReactRefreshHelpers$02ba.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -35970,43 +37960,19 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
-var _react = require("react");
-var _config = require("./config");
+var _endpoints = require("../Services/Endpoints");
 var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _error = require("./Error");
-var _errorDefault = parcelHelpers.interopDefault(_error);
+var _useRestaurant = require("../Hooks/useRestaurant");
+var _useRestaurantDefault = parcelHelpers.interopDefault(_useRestaurant);
 var _s = $RefreshSig$();
 const RestaurantMenu = ()=>{
     _s();
     const { resId } = (0, _reactRouterDom.useParams)();
-    const [restaurant, setRestaurant] = (0, _react.useState)(null);
-    const [isError, setIsError] = (0, _react.useState)(false);
-    (0, _react.useEffect)(()=>{
-        getRestaurantInfo();
-    }, []);
-    async function getRestaurantInfo() {
-        try {
-            const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId=" + resId);
-            const json = await data.json();
-            console.log(json);
-            if (json.data) setRestaurant(json.data);
-            else setIsError(true);
-        } catch (error) {
-            console.error(error);
-            setIsError(true);
-        }
-    }
-    if (isError) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {
-        message: "Restaurant data is currently unavailable"
-    }, void 0, false, {
-        fileName: "src/components/RestaurantMenu.jsx",
-        lineNumber: 35,
-        columnNumber: 12
-    }, undefined);
+    const restaurant = (0, _useRestaurantDefault.default)(resId);
     if (!restaurant) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.jsx",
-        lineNumber: 39,
+        lineNumber: 11,
         columnNumber: 12
     }, undefined);
     const restaurantInfo = restaurant?.cards?.[2]?.card?.card?.info;
@@ -36022,36 +37988,36 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 48,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: restaurantInfo?.name
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 49,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: (0, _config.IMG_CDN) + restaurantInfo?.cloudinaryImageId,
+                        src: (0, _endpoints.IMG_CDN) + restaurantInfo?.cloudinaryImageId,
                         alt: restaurantInfo?.name
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 50,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: restaurantInfo?.locality
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 51,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: restaurantInfo?.costForTwoMessage
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 52,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -36061,13 +38027,13 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 53,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.jsx",
-                lineNumber: 47,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36076,7 +38042,7 @@ const RestaurantMenu = ()=>{
                         children: "Menu Items"
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 56,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -36084,36 +38050,37 @@ const RestaurantMenu = ()=>{
                                 children: itemCards?.card?.info?.name
                             }, itemCards?.card?.info?.id, false, {
                                 fileName: "src/components/RestaurantMenu.jsx",
-                                lineNumber: 60,
+                                lineNumber: 32,
                                 columnNumber: 15
                             }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "No menu items available"
                         }, void 0, false, {
                             fileName: "src/components/RestaurantMenu.jsx",
-                            lineNumber: 63,
+                            lineNumber: 35,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.jsx",
-                        lineNumber: 57,
+                        lineNumber: 29,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.jsx",
-                lineNumber: 55,
+                lineNumber: 27,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.jsx",
-        lineNumber: 46,
+        lineNumber: 18,
         columnNumber: 5
     }, undefined);
 };
-_s(RestaurantMenu, "fC9golbUoWac/AzWuLDYNjrcomg=", false, function() {
+_s(RestaurantMenu, "zGMILinfkkwI4fu/vaXqgn2ST8A=", false, function() {
     return [
-        (0, _reactRouterDom.useParams)
+        (0, _reactRouterDom.useParams),
+        (0, _useRestaurantDefault.default)
     ];
 });
 _c = RestaurantMenu;
@@ -36126,6 +38093,57 @@ $RefreshReg$(_c, "RestaurantMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react":"21dqq","./config":"4T6KH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Shimmer":"g6ZGj","./Error":"cKXa2"}]},["aQL8O","2hAeU","fGRvi"], "fGRvi", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Shimmer":"g6ZGj","../Hooks/useRestaurant":"fhe8k","../Services/Endpoints":"9AqmV"}],"fhe8k":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6ad9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6ad9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _error = require("../components/Error");
+var _errorDefault = parcelHelpers.interopDefault(_error);
+var _endpoints = require("../Services/Endpoints");
+var _s = $RefreshSig$();
+const useRestaurant = (resId)=>{
+    _s();
+    const [restaurant, setRestaurant] = (0, _react.useState)(null);
+    const [isError, setIsError] = (0, _react.useState)(false);
+    (0, _react.useEffect)(()=>{
+        getRestaurantInfo();
+    }, []);
+    async function getRestaurantInfo() {
+        try {
+            const data = await fetch((0, _endpoints.RESTAURANT_MENU) + resId);
+            const json = await data.json();
+            console.log(json);
+            if (json.data) setRestaurant(json.data);
+            else setIsError(true);
+        } catch (error) {
+            console.error(error);
+            setIsError(true);
+        }
+    }
+    if (isError) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {
+        message: "Restaurant data is currently unavailable"
+    }, void 0, false, {
+        fileName: "src/Hooks/useRestaurant.jsx",
+        lineNumber: 29,
+        columnNumber: 14
+    }, undefined);
+    return restaurant;
+};
+_s(useRestaurant, "VlY/rRYZDc/WChfegYDRr8CksnY=");
+exports.default = useRestaurant;
+
+  $parcel$ReactRefreshHelpers$6ad9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/Error":"cKXa2","../Services/Endpoints":"9AqmV"}]},["aQL8O","2hAeU","fGRvi"], "fGRvi", "parcelRequire94c2")
 
 //# sourceMappingURL=Home.6765d2ea.js.map

@@ -1,13 +1,14 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import "../../Home.css"
+import Logo from "./Assets/logo.jpg"
 
 export const Title=()=>{
     return(
         <a href="/">
         <img className="logo"
         alt="logo" 
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSicjVAlj83VbE9otiuKD1oF_JS1G_PHFxLOw&s" />
+        src={Logo} />
         </a>
     )
 }

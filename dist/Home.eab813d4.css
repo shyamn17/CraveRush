@@ -37,6 +37,10 @@
   display: flex;
 }
 
+.menuitems {
+  display: flex;
+}
+
 .shimmer-container {
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;

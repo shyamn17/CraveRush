@@ -24,6 +24,7 @@ const [isLoggedIn , setisLoggedIn]=useState(false);
     <div className="nav-items">
     <ul>
     <li><Link to="/">Home</Link></li>
+    <li><Link to="/instamart">InstaMart</Link></li>  
     <li><Link to="/about">About Us</Link></li>  
     <li><Link to="/">Cart</Link></li>  
     <li><Link to="/contact">Contact</Link></li>  

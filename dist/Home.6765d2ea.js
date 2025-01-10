@@ -2962,6 +2962,8 @@ var _about = require("./components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
+var _instamart = require("./components/Instamart");
+var _instamartDefault = parcelHelpers.interopDefault(_instamart);
 var _contact = require("./components/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _restaurantMenu = require("./components/RestaurantMenu");
@@ -2973,23 +2975,23 @@ const AppComponent = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/Home.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 8
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/Home.js",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 8
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/Home.js",
-                lineNumber: 18,
+                lineNumber: 19,
                 columnNumber: 8
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Home.js",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, undefined);
 };
@@ -2999,12 +3001,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppComponent, {}, void 0, false, {
             fileName: "src/Home.js",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 16
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/Home.js",
-            lineNumber: 27,
+            lineNumber: 28,
             columnNumber: 21
         }, undefined),
         children: [
@@ -3012,7 +3014,15 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 31,
+                    lineNumber: 32,
+                    columnNumber: 22
+                }, undefined)
+            },
+            {
+                path: "/instamart",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _instamartDefault.default), {}, void 0, false, {
+                    fileName: "src/Home.js",
+                    lineNumber: 36,
                     columnNumber: 22
                 }, undefined)
             },
@@ -3020,7 +3030,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 35,
+                    lineNumber: 40,
                     columnNumber: 22
                 }, undefined),
                 children: [
@@ -3028,7 +3038,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                         path: "profile",
                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
                             fileName: "src/Home.js",
-                            lineNumber: 38,
+                            lineNumber: 43,
                             columnNumber: 24
                         }, undefined)
                     }
@@ -3038,7 +3048,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 43,
+                    lineNumber: 48,
                     columnNumber: 22
                 }, undefined)
             },
@@ -3046,7 +3056,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurant/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/Home.js",
-                    lineNumber: 47,
+                    lineNumber: 52,
                     columnNumber: 22
                 }, undefined)
             }
@@ -3058,7 +3068,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/Home.js",
-    lineNumber: 55,
+    lineNumber: 60,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3069,7 +3079,7 @@ $RefreshReg$(_c, "AppComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"knC38","./components/Footer":"2OVeV","./components/Body":"hHUrP","react-router-dom":"9xmpe","./components/About":"hkKyJ","./components/Error":"cKXa2","./components/Contact":"25EXR","./components/RestaurantMenu":"ixexi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Profile":"5QmVt"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"knC38","./components/Footer":"2OVeV","./components/Body":"hHUrP","react-router-dom":"9xmpe","./components/About":"hkKyJ","./components/Error":"cKXa2","./components/Contact":"25EXR","./components/RestaurantMenu":"ixexi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Profile":"5QmVt","./components/Instamart":"gXFPC"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -27379,8 +27389,8 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/about",
-                                children: "About Us"
+                                to: "/instamart",
+                                children: "InstaMart"
                             }, void 0, false, {
                                 fileName: "src/components/Header.jsx",
                                 lineNumber: 27,
@@ -27393,8 +27403,8 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/",
-                                children: "Cart"
+                                to: "/about",
+                                children: "About Us"
                             }, void 0, false, {
                                 fileName: "src/components/Header.jsx",
                                 lineNumber: 28,
@@ -27407,8 +27417,8 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/contact",
-                                children: "Contact"
+                                to: "/",
+                                children: "Cart"
                             }, void 0, false, {
                                 fileName: "src/components/Header.jsx",
                                 lineNumber: 29,
@@ -27417,6 +27427,20 @@ const Header = ()=>{
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
                             lineNumber: 29,
+                            columnNumber: 5
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.jsx",
+                                lineNumber: 30,
+                                columnNumber: 9
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.jsx",
+                            lineNumber: 30,
                             columnNumber: 5
                         }, undefined)
                     ]
@@ -27435,14 +27459,14 @@ const Header = ()=>{
                 children: "Logout"
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 5
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>setisLoggedIn(true),
                 children: "Login "
             }, void 0, false, {
                 fileName: "src/components/Header.jsx",
-                lineNumber: 35,
+                lineNumber: 36,
                 columnNumber: 5
             }, undefined)
         ]
@@ -37660,9 +37684,11 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IMG_CDN", ()=>IMG_CDN);
 parcelHelpers.export(exports, "RESTAURANT_MENU", ()=>RESTAURANT_MENU);
 parcelHelpers.export(exports, "RESTAURANTS", ()=>RESTAURANTS);
+parcelHelpers.export(exports, "INSTAMART", ()=>INSTAMART);
 const IMG_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 const RESTAURANT_MENU = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId=";
 const RESTAURANTS = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+const INSTAMART = "https://www.swiggy.com/api/instamart/home?clientId=INSTAMART-APP";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -37674,7 +37700,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _homeCss = require("../../Home.css"); // Add a separate CSS file for shimmer styles
+var _homeCss = require("../../Home.css");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "shimmer-container",
@@ -38144,6 +38170,132 @@ exports.default = useRestaurant;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/Error":"cKXa2","../Services/Endpoints":"9AqmV"}]},["aQL8O","2hAeU","fGRvi"], "fGRvi", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/Error":"cKXa2","../Services/Endpoints":"9AqmV"}],"gXFPC":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$66fa = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$66fa.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _useInstamart = require("../Hooks/useInstamart");
+var _useInstamartDefault = parcelHelpers.interopDefault(_useInstamart);
+var _endpoints = require("../Services/Endpoints");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _s = $RefreshSig$();
+const Instamart = ()=>{
+    _s();
+    const items = (0, _useInstamartDefault.default)();
+    const martinfo = items?.data?.widgets[1]?.data;
+    if (!items) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Instamart.jsx",
+        lineNumber: 11,
+        columnNumber: 16
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "martitems",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Menu Items"
+            }, void 0, false, {
+                fileName: "src/components/Instamart.jsx",
+                lineNumber: 16,
+                columnNumber: 10
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                children: martinfo && martinfo.length > 0 ? martinfo.map((data)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                children: data.displayName
+                            }, void 0, false, {
+                                fileName: "src/components/Instamart.jsx",
+                                lineNumber: 21,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _endpoints.IMG_CDN) + data.imageId,
+                                alt: data.displayName
+                            }, void 0, false, {
+                                fileName: "src/components/Instamart.jsx",
+                                lineNumber: 22,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, data.nodeId, true, {
+                        fileName: "src/components/Instamart.jsx",
+                        lineNumber: 20,
+                        columnNumber: 17
+                    }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: "No menu items available"
+                }, void 0, false, {
+                    fileName: "src/components/Instamart.jsx",
+                    lineNumber: 26,
+                    columnNumber: 13
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Instamart.jsx",
+                lineNumber: 17,
+                columnNumber: 10
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Instamart.jsx",
+        lineNumber: 15,
+        columnNumber: 10
+    }, undefined);
+};
+_s(Instamart, "t3Ywaw4L2XsCKx5p+ihivgSeItU=", false, function() {
+    return [
+        (0, _useInstamartDefault.default)
+    ];
+});
+_c = Instamart;
+exports.default = Instamart;
+var _c;
+$RefreshReg$(_c, "Instamart");
+
+  $parcel$ReactRefreshHelpers$66fa.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Hooks/useInstamart":"kdlJI","../Services/Endpoints":"9AqmV","./Shimmer":"g6ZGj"}],"kdlJI":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$aac9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$aac9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _endpoints = require("../Services/Endpoints");
+var _react = require("react");
+var _s = $RefreshSig$();
+const useInstamart = ()=>{
+    _s();
+    const [Items, setItems] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        getMart();
+    }, []);
+    async function getMart() {
+        const data = await fetch((0, _endpoints.INSTAMART));
+        const json = await data.json();
+        console.log(json);
+        setItems(json);
+    }
+    return Items;
+};
+_s(useInstamart, "/RkqBLVroDP5+a1fSNmOs4igbkQ=");
+exports.default = useInstamart;
+
+  $parcel$ReactRefreshHelpers$aac9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"../Services/Endpoints":"9AqmV","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","2hAeU","fGRvi"], "fGRvi", "parcelRequire94c2")
 
 //# sourceMappingURL=Home.6765d2ea.js.map

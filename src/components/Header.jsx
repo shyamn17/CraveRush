@@ -1,7 +1,8 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import "../../Home.css"
-import Logo from "./Assets/logo.jpg"
+import Logo from "../Assets/logo.jpg"
+import useOnline from "../Hooks/useOnline"
 
 export const Title=()=>{
     return(
@@ -16,6 +17,7 @@ export const Title=()=>{
 const Header=()=>{
 
 const [isLoggedIn , setisLoggedIn]=useState(false);
+const isOnline=useOnline();
 
     return(
         <div className="header">
@@ -30,6 +32,7 @@ const [isLoggedIn , setisLoggedIn]=useState(false);
 
     </ul>
     </div>
+    <h3> {useOnline()?"🟢":"⛔"}</h3>
     {isLoggedIn ? (
     <button onClick={()=>setisLoggedIn(false)}>Logout</button>): 
     <button onClick={()=>setisLoggedIn(true)}>Login </button>}

@@ -25,7 +25,7 @@
 87C:\Users\hp\Downloads\Food_app\node_modules\@parcel\core\src\requests\PackageRequest.js133806133695669736 0
 34C:\Users\hp\Downloads\Food_app\src133808789884376367 1
 78C:\Users\hp\Downloads\Food_app\node_modules\@parcel\core\lib\CommittedAsset.js133806133677646061 0
-35C:\Users\hp\Downloads\Food_app\dist133809797938129313 1
+35C:\Users\hp\Downloads\Food_app\dist133809845879563974 1
 91C:\Users\hp\Downloads\Food_app\node_modules\caniuse-lite\data\features\css-marker-pseudo.js133806133876947216 0
 75C:\Users\hp\Downloads\Food_app\node_modules\@parcel\watcher\src\Debounce.cc133806133803032851 0
 72C:\Users\hp\Downloads\Food_app\node_modules\electron-to-chromium\LICENSE133806134005313588 0
@@ -48,7 +48,7 @@
 75C:\Users\hp\Downloads\Food_app\node_modules\caniuse-lite\data\regions\DE.js133806133960521644 0
 55C:\Users\hp\Downloads\Food_app\node_modules\timsort\src133806134140222356 1
 73C:\Users\hp\Downloads\Food_app\node_modules\domutils\lib\esm\traversal.js133806134002118544 0
-39C:\Users\hp\Downloads\Food_app\Home.css133806133645102389 0
+39C:\Users\hp\Downloads\Food_app\Home.css133809845752725997 0
 65C:\Users\hp\Downloads\Food_app\node_modules\js-yaml\lib\dumper.js133806134023460738 0
 90C:\Users\hp\Downloads\Food_app\node_modules\lmdb\node_modules\node-addon-api\noexcept.gypi133806134046332987 0
 93C:\Users\hp\Downloads\Food_app\node_modules\caniuse-lite\data\features\css-backdrop-filter.js133806133866581714 0
@@ -95,8 +95,8 @@
 85C:\Users\hp\Downloads\Food_app\node_modules\caniuse-lite\data\features\input-event.js133806133909657741 0
 50C:\Users\hp\Downloads\Food_app\node_modules\semver133806134136329463 1
 100C:\Users\hp\Downloads\Food_app\node_modules\@swc\helpers\_\_is_native_reflect_construct\package.json133806133824099207 0
-56C:\Users\hp\Downloads\Food_app\src\components\Shimmer.js133806134146308614 0
-42C:\Users\hp\Downloads\Food_app\src\Home.js133809797819458957 0
+56C:\Users\hp\Downloads\Food_app\src\components\Shimmer.js133809840927208658 0
+42C:\Users\hp\Downloads\Food_app\src\Home.js133809840524715912 0
 63C:\Users\hp\Downloads\Food_app\node_modules\dotenv\package.json133806134005293568 0
 96C:\Users\hp\Downloads\Food_app\node_modules\caniuse-lite\data\features\keyboardevent-charcode.js133806133913678721 0
 104C:\Users\hp\Downloads\Food_app\node_modules\@swc\helpers\src\_class_static_private_field_destructure.mjs133806133842783715 0
@@ -109,7 +109,7 @@
 40C:\Users\hp\Downloads\Food_app\src\Hooks133809791410623082 1
 61C:\Users\hp\Downloads\Food_app\node_modules\semver\preload.js133806134136171602 0
 73C:\Users\hp\Downloads\Food_app\node_modules\react-error-overlay\README.md133806134100198041 0
-56C:\Users\hp\Downloads\Food_app\src\components\Header.jsx133808801385231563 0
+56C:\Users\hp\Downloads\Food_app\src\components\Header.jsx133809799016948505 0
 65C:\Users\hp\Downloads\Food_app\node_modules\@parcel\optimizer-css133806133715423603 1
 43C:\Users\hp\Downloads\Food_app\src\Services133808790097996070 1
 59C:\Users\hp\Downloads\Food_app\node_modules\semver\index.js133806134134455309 0
@@ -118,7 +118,7 @@
 81C:\Users\hp\Downloads\Food_app\node_modules\utility-types\dist\utility-types.d.ts133806134144782513 0
 85C:\Users\hp\Downloads\Food_app\node_modules\caniuse-lite\data\features\textcontent.js133806133939010818 0
 69C:\Users\hp\Downloads\Food_app\node_modules\escalade\sync\index.d.mts133806134010939694 0
-57C:\Users\hp\Downloads\Food_app\src\Services\Endpoints.jsx133809766348983549 0
+57C:\Users\hp\Downloads\Food_app\src\Services\Endpoints.jsx133809801846628403 0
 83C:\Users\hp\Downloads\Food_app\node_modules\caniuse-lite\data\features\dom-range.js133806133895141929 0
 97C:\Users\hp\Downloads\Food_app\node_modules\posthtml\node_modules\entities\lib\maps\entities.json133806134072869699 0
 93C:\Users\hp\Downloads\Food_app\node_modules\@swc\helpers\src\_check_private_redeclaration.mjs133806133842329740 0
@@ -142,7 +142,7 @@
 87C:\Users\hp\Downloads\Food_app\node_modules\@parcel\watcher\src\linux\InotifyBackend.hh133806133803180825 0
 120C:\Users\hp\Downloads\Food_app\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages-test.ps1133806134051476710 0
 51C:\Users\hp\Downloads\Food_app\node_modules\is-glob133806134019884209 1
-57C:\Users\hp\Downloads\Food_app\src\Hooks\useInstamart.jsx133809784276010611 0
+57C:\Users\hp\Downloads\Food_app\src\Hooks\useInstamart.jsx133809818714792027 0
 65C:\Users\hp\Downloads\Food_app\node_modules\@parcel\feature-flags133806133707195514 1
 75C:\Users\hp\Downloads\Food_app\node_modules\domelementtype\lib\esm\index.js133806133999814634 0
 120C:\Users\hp\Downloads\Food_app\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\build-test.js133806134052849143 0
@@ -223,7 +223,7 @@
 56C:\Users\hp\Downloads\Food_app\node_modules\entities\lib133806134009738252 1
 56C:\Users\hp\Downloads\Food_app\src\components\Footer.jsx133806134146268635 0
 67C:\Users\hp\Downloads\Food_app\node_modules\browserslist\error.d.ts133806133851754061 0
-59C:\Users\hp\Downloads\Food_app\src\components\Instamart.jsx133809798065691040 0
+59C:\Users\hp\Downloads\Food_app\src\components\Instamart.jsx133809845833946102 0
 93C:\Users\hp\Downloads\Food_app\node_modules\posthtml\node_modules\dom-serializer\node_modules133806134068867722 1
 62C:\Users\hp\Downloads\Food_app\node_modules\picocolors\LICENSE133806134063978502 0
 72C:\Users\hp\Downloads\Food_app\node_modules\postcss-value-parser\LICENSE133806134065787903 0
@@ -1798,7 +1798,7 @@
 71C:\Users\hp\Downloads\Food_app\node_modules\@parcel\workers\lib\threads133806133805769584 1
 65C:\Users\hp\Downloads\Food_app\node_modules\escalade\package.json133806134010774256 0
 64C:\Users\hp\Downloads\Food_app\node_modules\@parcel\workers\test133806133811146835 1
-53C:\Users\hp\Downloads\Food_app\dist\Home.eab813d4.css133809797901470398 0
+53C:\Users\hp\Downloads\Food_app\dist\Home.eab813d4.css133809845851393986 0
 116C:\Users\hp\Downloads\Food_app\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\README.md133806134052579036 0
 72C:\Users\hp\Downloads\Food_app\node_modules\@parcel\cache\src\FSCache.js133806133667398166 0
 93C:\Users\hp\Downloads\Food_app\node_modules\msgpackr-extract\node_modules\detect-libc\LICENSE133806134051968715 0
@@ -4401,8 +4401,8 @@
 59C:\Users\hp\Downloads\Food_app\node_modules\.bin\semver.ps1133806133662436132 0
 75C:\Users\hp\Downloads\Food_app\node_modules\.bin\update-browserslist-db.cmd133806133662456110 0
 75C:\Users\hp\Downloads\Food_app\node_modules\.bin\update-browserslist-db.ps1133806133662576685 0
-52C:\Users\hp\Downloads\Food_app\dist\Home.6765d2ea.js133809797913593410 0
-56C:\Users\hp\Downloads\Food_app\dist\Home.6765d2ea.js.map133809797937679571 0
-57C:\Users\hp\Downloads\Food_app\dist\Home.eab813d4.css.map133809797901580337 0
-45C:\Users\hp\Downloads\Food_app\dist\Home.html133809797915822112 0
-53C:\Users\hp\Downloads\Food_app\dist\logo.99316a6a.jpg133809797901390441 0
+52C:\Users\hp\Downloads\Food_app\dist\Home.6765d2ea.js133809845851413967 0
+56C:\Users\hp\Downloads\Food_app\dist\Home.6765d2ea.js.map133809845879543999 0
+57C:\Users\hp\Downloads\Food_app\dist\Home.eab813d4.css.map133809845856925077 0
+45C:\Users\hp\Downloads\Food_app\dist\Home.html133809845851393986 0
+53C:\Users\hp\Downloads\Food_app\dist\logo.99316a6a.jpg133809845850657686 0

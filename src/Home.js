@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About";
 import Error from "./components/Error";
+import Instamart from "./components/Instamart";
 import Contact from "./components/Contact";
 import RestuarantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile"
@@ -29,6 +30,10 @@ const appRouter = createBrowserRouter([
         {
             path: "/",
             element: <Body />
+          },
+          {
+            path: "/instamart",
+            element: <Instamart />
           },
          {
             path: "/about",

@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState,useContext} from "react";
 import {Link} from "react-router-dom";
 import Logo from "../Assets/logo.jpg"
 import useOnline from "../Hooks/useOnline"
+<<<<<<< HEAD
+=======
+import userContext from "../Hooks/userContext";
+>>>>>>> origin/master
 
 export const Title=()=>{
     return(
@@ -14,6 +18,8 @@ export const Title=()=>{
 const Header=()=>{
 
 const [isLoggedIn , setisLoggedIn]=useState(false);
+
+const user=useContext(userContext);
 
     return(
         <div className="flex">
@@ -30,6 +36,10 @@ const [isLoggedIn , setisLoggedIn]=useState(false);
     </ul>
     </div>
     <h3> {useOnline()?"🟢":"⛔"}</h3>
+<<<<<<< HEAD
+=======
+    {user.name}
+>>>>>>> origin/master
     {isLoggedIn ? (
     <button onClick={()=>setisLoggedIn(false)}>Logout</button>): 
     <button onClick={()=>setisLoggedIn(true)}>Login </button>}

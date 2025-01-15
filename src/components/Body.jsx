@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { restaurantList } from "./config.js";
 import Items from "./Items";
 import Shimmer from "./Shimmer.js";
-import "../../Home.css"
 import {Link} from "react-router-dom"
 import {RESTAURANTS} from "../Services/Endpoints"
 import useOnline from "../Hooks/useOnline"

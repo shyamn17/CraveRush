@@ -18,8 +18,8 @@ const Instamart=()=>{
           {martinfo && martinfo.length > 0 ? (
             martinfo.map((data) => (
                 <li key={data.nodeId}>
-                <h3>{data.displayName}</h3>
                 <img src={IMG_CDN + data.imageId} alt={data.displayName} />
+                <h3>{data.displayName}</h3>
               </li>
             ))
           ) : (

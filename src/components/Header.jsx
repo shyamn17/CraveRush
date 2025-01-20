@@ -2,10 +2,9 @@ import { useState,useContext} from "react";
 import {Link} from "react-router-dom";
 import Logo from "../Assets/logo.jpg"
 import useOnline from "../Hooks/useOnline"
-<<<<<<< HEAD
-=======
 import userContext from "../Hooks/userContext";
->>>>>>> origin/master
+import { useSelector } from "react-redux";
+import Store from "../Redux/Store";
 
 export const Title=()=>{
     return(
@@ -21,6 +20,8 @@ const [isLoggedIn , setisLoggedIn]=useState(false);
 
 const user=useContext(userContext);
 
+const cartItems=useSelector((store) => store.cart.items)
+console.log(cartItems)
     return(
         <div className="flex">
         <Title />
@@ -30,16 +31,13 @@ const user=useContext(userContext);
     <li><Link to="/">Home</Link></li>
     <li><Link to="/instamart">InstaMart</Link></li>  
     <li><Link to="/about">About Us</Link></li>  
-    <li><Link to="/">Cart</Link></li>  
+    <li><Link to="/cart">Cart- {cartItems?.length}</Link></li>  
     <li><Link to="/contact">Contact</Link></li>  
 
     </ul>
     </div>
     <h3> {useOnline()?"🟢":"⛔"}</h3>
-<<<<<<< HEAD
-=======
     {user.name}
->>>>>>> origin/master
     {isLoggedIn ? (
     <button onClick={()=>setisLoggedIn(false)}>Logout</button>): 
     <button onClick={()=>setisLoggedIn(true)}>Login </button>}

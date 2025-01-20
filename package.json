@@ -4,23 +4,31 @@
   "scripts": {
     "test": "jest",
     "start": "parcel Home.html",
-    "build": "parcel build Home.html"
+    "build": "npm run clean && parcel build Home.html",
+     "clean": "npx .parcel-cache clean"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "parcel": "^2.13.2",
+    "parcel": "^2.13.3",
     "postcss": "^8.4.49",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loading-skeleton": "^3.5.0",
+    "react-redux": "^9.2.0",
     "react-router": "^6.28.0",
     "react-router-dom": "^6.28.0"
-  }
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shyamn17/Food_app/issues"
+  },
+  "homepage": "https://github.com/shyamn17/Food_app#readme",
+  "description": ""
 }

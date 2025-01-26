@@ -4,8 +4,8 @@
   "scripts": {
     "test": "jest",
     "start": "parcel Home.html",
-    "build": "npm run clean && parcel build Home.html",
-     "clean": "npx .parcel-cache clean"
+    "build": "parcel build Home.html",
+    "clean": "npx .parcel-cache clean"
   },
   "keywords": [],
   "author": "",

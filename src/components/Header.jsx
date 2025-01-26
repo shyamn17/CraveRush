@@ -1,48 +1,61 @@
-import { useState,useContext} from "react";
-import {Link} from "react-router-dom";
-import Logo from "../Assets/logo.jpg"
-import useOnline from "../Hooks/useOnline"
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../Assets/logo.png";
+import useOnline from "../Hooks/useOnline";
 import userContext from "../Hooks/userContext";
 import { useSelector } from "react-redux";
-import Store from "../Redux/Store";
 
-export const Title=()=>{
-    return(
-        <a href="/">
-        <img className="logo" alt="logo" src={Logo} />
-        </a>
-    )
-}
+export const Title = () => {
+  return (
+    <a href="/">
+      <img className="w-38 h-20" alt="logo" src={Logo} />
+    </a>
+  );
+};
 
-const Header=()=>{
+const Header = () => {
+  const user = useContext(userContext);
+  const cartItems = useSelector((store) => store.cart.items);
 
-const [isLoggedIn , setisLoggedIn]=useState(false);
+  return (
+    <div className="flex justify-between items-center py-0.3 bg-[#603F83FF] text-[#C7D3D4FF]">
+      <Title />
+      <div className="hidden md:flex space-x-4">
+        <ul className="flex space-x-4">
+          <li><Link to="/" className="hover:text-white">Home</Link></li>
+          <li><Link to="/instamart" className="hover:text-white">InstaMart</Link></li>
+          <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+          <li><Link to="/cart" className="hover:text-white">Cart ({cartItems?.length})</Link></li>
+          <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+        </ul>
+      </div>
 
-const user=useContext(userContext);
+      <div className="flex items-center space-x-4">
+        <h3>{useOnline() ? "🟢" : "⛔"}</h3>
+        <span>{user.name}</span>
+        <button
+          className="bg-[#C7D3D4FF] text-[#603F83FF] hover:bg-[#603F83FF] hover:text-[#C7D3D4FF] py-2 px-4 rounded">
+          Login
+        </button>
+      </div>
 
-const cartItems=useSelector((store) => store.cart.items)
-console.log(cartItems)
-    return(
-        <div className="flex">
-        <Title />
-
-    <div className="nav-items">
-    <ul>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/instamart">InstaMart</Link></li>  
-    <li><Link to="/about">About Us</Link></li>  
-    <li><Link to="/cart">Cart- {cartItems?.length}</Link></li>  
-    <li><Link to="/contact">Contact</Link></li>  
-
-    </ul>
+      <div className="md:hidden flex items-center">
+        <input type="checkbox" id="menu-toggle" className="hidden peer" />
+        <label htmlFor="menu-toggle" className="text-[#C7D3D4FF] text-3xl cursor-pointer peer-checked:hidden">
+          ☰
+        </label>
+        <div className="peer-checked:block hidden absolute top-16 left-0 w-full bg-[#603F83FF] text-[#C7D3D4FF] py-4 px-6">
+          <ul className="space-y-4">
+            <li><Link to="/" className="block hover:text-white">Home</Link></li>
+            <li><Link to="/instamart" className="block hover:text-white">InstaMart</Link></li>
+            <li><Link to="/about" className="block hover:text-white">About Us</Link></li>
+            <li><Link to="/cart" className="block hover:text-white">Cart ({cartItems?.length})</Link></li>
+            <li><Link to="/contact" className="block hover:text-white">Contact</Link></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <h3> {useOnline()?"🟢":"⛔"}</h3>
-    {user.name}
-    {isLoggedIn ? (
-    <button onClick={()=>setisLoggedIn(false)}>Logout</button>): 
-    <button onClick={()=>setisLoggedIn(true)}>Login </button>}
-    </div>
-    )
-    }
+  );
+};
 
 export default Header;

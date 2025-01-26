@@ -16,11 +16,13 @@ import Store from "./Redux/Store";
 
 const AppComponent=()=>{
     return(
+      <div >
     <Provider store={Store}>
        <Header /> 
        <Outlet />
        <Footer />
     </Provider>
+    </div>
     )
 }
 

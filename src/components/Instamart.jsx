@@ -13,7 +13,7 @@ const Instamart = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-8 px-4 md:px-16 lg:px-24 ">
      <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#603F83FF] to-[#FF4F81] mb-10 drop-shadow-lg flex justify-center items-center h-full">
-         Instamart Items
+        SHOP BY CATEGORY
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
         {martinfo && martinfo.length > 0 ? (

@@ -4,4 +4,4 @@ export const RESTAURANT_MENU="https://www.swiggy.com/dapi/menu/pl?page-type=REGU
 
 export const RESTAURANTS="https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
-export const INSTAMART="https://www.swiggy.com/api/instamart/home?clientId=INSTAMART-APP";
+export const INSTAMART="https://www.swiggy.com/api/instamart/home?pageNo=1&layoutId=2073&storeId=911032&primaryStoreId=911032&secondaryStoreId=&clientId=INSTAMART-APP";

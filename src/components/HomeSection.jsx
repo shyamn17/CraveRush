@@ -76,9 +76,9 @@ export const HomeSection = ({ searchtxt, setSearchtxt, handleSearch }) => {
           <Link
           key={index}
           to={card.link}
-          className="bg-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center h-64 w-64 p-1"
+          className="bg-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center h-72 w-64 "
         >
-          <img src={card.img} alt="" className="h-full w-full object-cover rounded-lg" />
+          <img src={card.img} alt="" className="h-auto w-auto object-cover rounded-lg p-2" />
         </Link>
         ))}
       </div>

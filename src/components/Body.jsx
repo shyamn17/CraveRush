@@ -29,8 +29,7 @@ const Body = () => {
       setRestaurants(restaurantsData);
       setFilteredRestaurants(restaurantsData);
     } catch (error) {
-      alert("Failed to fetch restaurants. Please try again later.");
-      console.error("Failed to fetch restaurants:", error);
+        console.error("Failed to fetch restaurants:", error);
     }
   };
 

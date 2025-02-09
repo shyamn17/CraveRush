@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html",
-    "build": "parcel build index.html --no-cache",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html --no-cache",
     "clean": "npx .parcel-cache clean"
   },
   "keywords": [],

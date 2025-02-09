@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { RESTAURANTS } from "../Services/Endpoints";
 import Items from "./Items";
-import Shimmer from "./Shimmer.js";
+import Shimmer from "./Shimmer/Shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../Hooks/useOnline";
 import { HomeSection } from "./HomeSection"; 

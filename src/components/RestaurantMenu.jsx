@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { IMG_CDN } from "../Services/Endpoints";
-import Shimmer from "./Shimmer";
+import MenuShimmer from "./Shimmer/MenuShimmer";
 import useRestaurant from "../Hooks/useRestaurant";
 import { addItem } from "../Redux/Slices/cartSlice";
 import { useDispatch } from "react-redux";
@@ -26,7 +26,7 @@ const RestaurantMenu = () => {
   };
 
   if (!restaurant) {
-    return <Shimmer />;
+    return <MenuShimmer />;
   }
 
   const restaurantInfo = restaurant?.cards?.[2]?.card?.card?.info;

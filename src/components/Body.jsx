@@ -23,7 +23,7 @@ const Body = () => {
 
   const getRestaurants = async () => {
     try {
-      const data = await fetch(RESTAURANTS);
+      const data = await fetch("/api/restaurants");
       const json = await data.json();
       const restaurantsData = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
       setRestaurants(restaurantsData);

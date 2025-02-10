@@ -10,7 +10,7 @@ const useInstamart =()=>{
     },[])
 
 async function getMart(){
-    const data=await fetch(INSTAMART);
+    const data=await fetch("/api/instamart");
     const json=await data.json();
     console.log(json);
     setItems(json);

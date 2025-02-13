@@ -21,7 +21,7 @@ const Body = () => {
     getRestaurants();
   }, []);
 
-  const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/"; 
+  const CORS_PROXY = "https://api.allorigins.win/raw?url="; 
 
   const getRestaurants = async () => {
     try {

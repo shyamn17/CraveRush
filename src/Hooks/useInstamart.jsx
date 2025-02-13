@@ -1,29 +1,48 @@
 import { useEffect, useState } from "react";
-import { instamart_api } from "../Services/instamart_api"; // Import local API file
+import { INSTAMART } from "../Services/Endpoints";
+
+const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/";
 
 const useInstamart = () => {
-    const [items, setItems] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [isError, setIsError] = useState(false);
+  const [items, setItems] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
-    useEffect(() => {
-        getMart();
-    }, []);
+  useEffect(() => {
+    const delayFetch = setTimeout(() => {
+      getMart();
+    }, 2000); // Delay API call by 2 seconds
 
-    function getMart() {
-        try {
-            setItems(instamart_api); // Use local data
-            console.log("Instamart Data:", instamart_api);
-            setIsError(false);
-        } catch (error) {
-            console.error("Error fetching Instamart:", error);
-            setIsError(true);
-        } finally {
-            setIsLoading(false);
-        }
+    return () => clearTimeout(delayFetch); // Cleanup timeout if component unmounts
+  }, []);
+
+  async function getMart() {
+    setIsLoading(true);
+    try {
+      const response = await fetch(`${CORS_PROXY}${encodeURIComponent(INSTAMART)}`);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const json = await response.json();
+      console.log("Fetched Data:", json);
+
+      if (json) {
+        setItems(json);
+        setIsError(false);
+      } else {
+        throw new Error("Empty response from API");
+      }
+    } catch (error) {
+      console.error("Error fetching Instamart:", error);
+      setIsError(true);
+    } finally {
+      setIsLoading(false);
     }
+  }
 
-    return { items, isLoading, isError };
+  return { items, isLoading, isError };
 };
 
 export default useInstamart;

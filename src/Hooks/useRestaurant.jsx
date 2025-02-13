@@ -12,7 +12,7 @@ const useRestaurant = (resId) => {
         }
     }, [resId]); // Ensures refetching when resId changes
 
-    const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/";
+    const CORS_PROXY = "https://api.allorigins.win/raw?url=";
 
     async function getRestaurantInfo() {
         setIsLoading(true);

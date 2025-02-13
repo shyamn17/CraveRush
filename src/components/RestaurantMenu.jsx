@@ -91,7 +91,7 @@ const RestaurantMenu = () => {
                                     <p className="text-lg font-semibold text-[#603F83FF] mt-1">
                                         ₹{(item?.price ?? item?.finalPrice) / 100}
                                     </p>
-                                    <p className="text-sm text-gray-600 mt-2 mr-4">{item?.description}</p>
+                                    <p className="text-sm text-gray-600 mt-2">{item?.description}</p>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <img 

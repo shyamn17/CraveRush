@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { RESTAURANT_MENU } from "../Services/Endpoints";
 
 const useRestaurant = (resId) => {
     const [restaurant, setRestaurant] = useState(null);
@@ -9,16 +10,14 @@ const useRestaurant = (resId) => {
         if (resId) {
             getRestaurantInfo();
         }
-    }, [resId]);
+    }, [resId]); // Ensures refetching when resId changes
 
-    const API_URL = "/.netlify/functions/restaurant-menu"; // Use Netlify function
+    const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/";
 
     async function getRestaurantInfo() {
         setIsLoading(true);
         try {
-            const response = await fetch(`${API_URL}?id=${resId}`);
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-
+            const response = await fetch(`${CORS_PROXY}${RESTAURANT_MENU}${resId}`);
             const json = await response.json();
             console.log("API Response:", json);
 

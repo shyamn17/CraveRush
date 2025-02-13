@@ -1,27 +1,29 @@
 import { useEffect, useState } from "react";
-
-const API_URL = "/.netlify/functions/instamart"; // Netlify Function URL
+import { instamart_api } from "../Services/instamart_api"; // Import local API file
 
 const useInstamart = () => {
     const [items, setItems] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isError, setIsError] = useState(false);
 
     useEffect(() => {
         getMart();
     }, []);
 
-    async function getMart() {
+    function getMart() {
         try {
-            const response = await fetch(API_URL);
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-            const json = await response.json();
-            console.log(json);
-            setItems(json);
+            setItems(instamart_api); // Use local data
+            console.log("Instamart Data:", instamart_api);
+            setIsError(false);
         } catch (error) {
             console.error("Error fetching Instamart:", error);
+            setIsError(true);
+        } finally {
+            setIsLoading(false);
         }
     }
 
-    return items;
+    return { items, isLoading, isError };
 };
 
 export default useInstamart;

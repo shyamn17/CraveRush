@@ -3,36 +3,41 @@ import { RESTAURANT_MENU } from "../Services/Endpoints";
 
 const useRestaurant = (resId) => {
     const [restaurant, setRestaurant] = useState(null);
-    const [isLoading, setIsLoading] = useState(true); // Add isLoading
+    const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
-        getRestaurantInfo();
-    }, []);
-    
+        if (resId) {
+            getRestaurantInfo();
+        }
+    }, [resId]); // Ensures refetching when resId changes
+
+    const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/";
+
     async function getRestaurantInfo() {
-        setIsLoading(true); // Set loading to true
+        setIsLoading(true);
         try {
-            const data = await fetch(`/api/restaurant-menu/${resId}`);
-            const json = await data.json();
-            console.log(json);
-            if (json?.data) { // Use optional chaining
+            const response = await fetch(`${CORS_PROXY}${RESTAURANT_MENU}${resId}`);
+            const json = await response.json();
+            console.log("API Response:", json);
+
+            if (json?.data) {
                 setRestaurant(json.data);
                 setIsError(false);
             } else {
                 setIsError(true);
-                setRestaurant(null); // Reset restaurant data
+                setRestaurant(null);
             }
         } catch (error) {
-            console.error(error);
+            console.error("Error fetching restaurant:", error);
             setIsError(true);
-            setRestaurant(null); // Reset restaurant data
+            setRestaurant(null);
         } finally {
-            setIsLoading(false); // Set loading to false
+            setIsLoading(false);
         }
     }
 
-    return { restaurant, isLoading, isError }; // Return an object
+    return { restaurant, isLoading, isError };
 };
 
 export default useRestaurant;

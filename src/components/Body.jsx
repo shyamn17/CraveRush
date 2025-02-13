@@ -21,9 +21,11 @@ const Body = () => {
     getRestaurants();
   }, []);
 
+  const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/"; 
+
   const getRestaurants = async () => {
     try {
-      const data = await fetch("/api/restaurants");
+   const data = await fetch(`${CORS_PROXY}${encodeURIComponent(RESTAURANTS)}`);
       const json = await data.json();
       const restaurantsData = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
       setRestaurants(restaurantsData);

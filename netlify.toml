@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist"  # For Vite
+  # publish = "build"  # Use this for Create React App
+
+[dev]
+  framework = "vite"  # If using Vite

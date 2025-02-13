@@ -5,7 +5,8 @@
     "test": "jest",
     "start": "parcel public/index.html",
     "build": "parcel build public/index.html --no-cache",
-    "clean": "npx .parcel-cache clean"
+    "clean": "npx .parcel-cache clean",
+    "dev": "vite --port 1234"
   },
   "keywords": [],
   "author": "",

@@ -8,11 +8,11 @@
       {
         "src": "package.json",
         "use": "@vercel/static-build",
-        "config": { "distDir": "build" }
+        "config": { "distDir": "public" }
       }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "/server.js" },
+      { "src": "/api/(.*)", "dest": "/instamart.js" },
       { "src": "/(.*)", "dest": "/index.html" }
     ]
   }

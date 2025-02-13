@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { RESTAURANT_MENU } from "../Services/Endpoints";
+
+const BACKEND_URL = "https://your-backend-url.https://craverush.vercel.app/restaurant";
 
 const useRestaurant = (resId) => {
     const [restaurant, setRestaurant] = useState(null);
@@ -10,25 +11,23 @@ const useRestaurant = (resId) => {
         if (resId) {
             getRestaurantInfo();
         }
-    }, [resId]); // Ensures refetching when resId changes
-
-    const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/"
-
+    }, [resId]);
     async function getRestaurantInfo() {
         setIsLoading(true);
         try {
-            const response = await fetch(`${CORS_PROXY}${RESTAURANT_MENU}${resId}`);
-            console.log("HTTP Status:", response.status); // Log HTTP status
-    
+            const response = await fetch(`${BACKEND_URL}/restaurant?resId=${resId}`);
+
+            console.log("HTTP Status:", response.status);
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
             const json = await response.json();
-            console.log("API Response:", json); // Log full response
-    
+            console.log("API Response:", json);
+
             if (json?.data) {
                 setRestaurant(json.data);
                 setIsError(false);
             } else {
-                setIsError(true);
-                setRestaurant(null);
+                throw new Error("Invalid API response structure");
             }
         } catch (error) {
             console.error("Error fetching restaurant:", error);
@@ -38,7 +37,7 @@ const useRestaurant = (resId) => {
             setIsLoading(false);
         }
     }
-    
+
     return { restaurant, isLoading, isError };
 };
 

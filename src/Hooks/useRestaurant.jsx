@@ -12,15 +12,17 @@ const useRestaurant = (resId) => {
         }
     }, [resId]); // Ensures refetching when resId changes
 
-    const CORS_PROXY = "https://api.allorigins.win/raw?url=";
+    const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/"
 
     async function getRestaurantInfo() {
         setIsLoading(true);
         try {
             const response = await fetch(`${CORS_PROXY}${RESTAURANT_MENU}${resId}`);
+            console.log("HTTP Status:", response.status); // Log HTTP status
+    
             const json = await response.json();
-            console.log("API Response:", json);
-
+            console.log("API Response:", json); // Log full response
+    
             if (json?.data) {
                 setRestaurant(json.data);
                 setIsError(false);
@@ -36,7 +38,7 @@ const useRestaurant = (resId) => {
             setIsLoading(false);
         }
     }
-
+    
     return { restaurant, isLoading, isError };
 };
 

@@ -19,7 +19,7 @@ const useInstamart = () => {
   async function getMart() {
     setIsLoading(true);
     try {
-      const response = await fetch(`${CORS_PROXY}${encodeURIComponent(INSTAMART)}`);
+      const response = await fetch(INSTAMART);
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

@@ -26,20 +26,20 @@ const Cart = () => {
   const increaseQuantity = (item) => {
     setQuantityMap((prevState) => ({
       ...prevState,
-      [item?.card?.info?.id]: (prevState[item?.card?.info?.id] || 1) + 1,
+      [item?.id]: (prevState[item?.id] || 1) + 1,
     }));
   };
 
   const decreaseQuantity = (item) => {
     setQuantityMap((prevState) => {
-      const currentQuantity = prevState[item?.card?.info?.id] || 1;
+      const currentQuantity = prevState[item?.id] || 1;
       if (currentQuantity > 1) {
         return {
           ...prevState,
-          [item?.card?.info?.id]: currentQuantity - 1,
+          [item?.id]: currentQuantity - 1,
         };
       }
-      handleRemoveItem(item?.card?.info?.id);
+      handleRemoveItem(item?.id);
       return prevState;
     });
   };
@@ -48,11 +48,25 @@ const Cart = () => {
   const calculateTotal = () => {
     let totalPrice = 0;
     cartItems.forEach((item) => {
-      const price = item?.card?.info?.price ? Number(item?.card?.info?.price) : Number(item?.card?.info?.defaultPrice);
-      const quantity = quantityMap[item?.card?.info?.id] || 1;
-      totalPrice += (price / 100) * quantity;
+      // Log the full item to see all properties
+      console.log("Item Data:", item);
+      
+      // Ensure price is valid
+      const price = item?.price || 0;
+      const quantity = quantityMap[item?.id] || 1;
+
+      // Log the price and quantity
+      console.log("Price:", price, " Quantity:", quantity);
+
+      // Calculate total if price is valid
+      if (price && !isNaN(price)) {
+        totalPrice += (price / 100) * quantity;
+      } else {
+        console.log("Invalid price detected for item", item);
+      }
     });
-    return totalPrice.toFixed(2);
+
+    return totalPrice.toFixed(2); // Ensure the total price is a string with 2 decimal places
   };
 
   // Calculate the final price with delivery, platform fee, GST, etc.
@@ -88,65 +102,80 @@ const Cart = () => {
             {cartItems.length === 0 ? (
               <li className="text-center text-xl">Your cart is empty</li>
             ) : (
-              cartItems.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex justify-between items-start bg-[#F9FAFB] rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300"
-                >
-                  <div className="flex flex-col flex-grow">
-                    <div className="flex items-center mb-3 space-x-3">
-                      {/* Veg/Non-Veg icon */}
-                      {item?.card?.info?.itemAttribute?.vegClassifier === "VEG" ? (
-                        <img src={require("../Assets/veg.jpg")} alt="Veg" className="w-5 h-5" />
-                      ) : (
-                        <img src={require("../Assets/nonveg.jpg")} alt="Non-Veg" className="w-5 h-5" />
+              cartItems.map((item, index) => {
+                console.log("Traversing Item:", item);  // Log each item for debugging
+
+                // Accessing item properties directly
+                const itemName = item?.name || "No Name";
+                const itemDescription = item?.description || "No Description";
+                const itemImageId = item?.imageId || "";
+                const itemPrice = (item?.price || 0) / 100;
+
+                console.log("Name:", itemName);
+                console.log("Description:", itemDescription);
+                console.log("Image ID:", itemImageId);
+                console.log("Price:", itemPrice);
+
+                return (
+                  <li
+                    key={index}
+                    className="flex justify-between items-start bg-[#F9FAFB] rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300"
+                  >
+                    <div className="flex flex-col flex-grow">
+                      <div className="flex items-center mb-3 space-x-3">
+                        {/* Veg/Non-Veg icon */}
+                        {item?.itemAttribute?.vegClassifier === "VEG" ? (
+                          <img src={require("../Assets/veg.jpg")} alt="Veg" className="w-5 h-5" />
+                        ) : (
+                          <img src={require("../Assets/nonveg.jpg")} alt="Non-Veg" className="w-5 h-5" />
+                        )}
+                      </div>
+                      <h3 className="text-xl font-semibold text-[#000000]">{itemName}</h3>
+                      <p className="text-lg font-semibold text-[#603F83FF] mt-1">
+                        ₹ {itemPrice}
+                      </p>
+                      <p className="text-sm text-gray-600 mt-2">{itemDescription}</p>
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                      <div className="w-32 h-32 relative mb-4">
+                        <img
+                          src={IMG_CDN + itemImageId}
+                          alt={itemName}
+                          className="rounded-md object-cover w-full h-full"
+                        />
+                      </div>
+
+                      {/* Quantity Controls */}
+                      <div className="flex items-center -mt-2">
+                        <button
+                          onClick={() => decreaseQuantity(item)}
+                          className="bg-[#603F83FF] text-white py-1 px-3 rounded-lg hover:bg-[#503F73] transition duration-300"
+                        >
+                          -
+                        </button>
+                        <span className="mx-4 text-lg">{quantityMap[item?.id] || 1}</span>
+                        <button
+                          onClick={() => increaseQuantity(item)}
+                          className="bg-[#603F83FF] text-white py-1 px-3 rounded-lg hover:bg-[#503F73] transition duration-300"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      {/* Remove Item Button */}
+                      {quantityMap[item?.id] === 0 && (
+                        <button
+                          className="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600 transition duration-300"
+                          onClick={() => handleRemoveItem(item?.id)}
+                        >
+                          Remove Item
+                        </button>
                       )}
                     </div>
-                    <h3 className="text-xl font-semibold text-[#000000]">{item?.card?.info?.name}</h3>
-                    <p className="text-lg font-semibold text-[#603F83FF] mt-1">
-                      ₹ {(item?.card?.info?.price || item?.card?.info?.defaultPrice) / 100}
-                    </p>
-                    <p className="text-sm text-gray-600 mt-2">{item?.card?.info?.description}</p>
-                  </div>
-
-                  <div className="flex flex-col items-center">
-                    <div className="w-32 h-32 relative mb-4">
-                      <img
-                        src={IMG_CDN + item?.card?.info?.imageId}
-                        alt={item?.card?.info?.name}
-                        className="rounded-md object-cover w-full h-full"
-                      />
-                    </div>
-
-                    {/* Quantity Controls */}
-                    <div className="flex items-center -mt-2">
-                      <button
-                        onClick={() => decreaseQuantity(item)}
-                        className="bg-[#603F83FF] text-white py-1 px-3 rounded-lg hover:bg-[#503F73] transition duration-300"
-                      >
-                        -
-                      </button>
-                      <span className="mx-4 text-lg">{quantityMap[item?.card?.info?.id] || 1}</span>
-                      <button
-                        onClick={() => increaseQuantity(item)}
-                        className="bg-[#603F83FF] text-white py-1 px-3 rounded-lg hover:bg-[#503F73] transition duration-300"
-                      >
-                        +
-                      </button>
-                    </div>
-
-                    {/* Remove Item Button */}
-                    {quantityMap[item?.card?.info?.id] === 0 && (
-                      <button
-                        className="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600 transition duration-300"
-                        onClick={() => handleRemoveItem(item?.card?.info?.id)}
-                      >
-                        Remove Item
-                      </button>
-                    )}
-                  </div>
-                </li>
-              ))
+                  </li>
+                );
+              })
             )}
           </ul>
         </div>
